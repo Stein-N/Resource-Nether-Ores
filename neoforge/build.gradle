@@ -1,0 +1,34 @@
+plugins {
+    id 'ml-loader'
+    id 'net.neoforged.gradle.userdev' version '7.0.107'
+}
+
+jarJar.enable()
+
+var at = file('src/main/resources/META-INF/accesstransformer.cfg')
+if (at.exists()) minecraft.accessTransformers.file at
+
+dependencies {
+    implementation "net.neoforged:neoforge:${neoforge_version}"
+}
+
+runs {
+    configureEach {
+        modSource project.sourceSets.main
+    }
+    client {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+    }
+    server {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        programArgument '--nogui'
+    }
+    data {
+        programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated').getAbsolutePath(), '--existing', project(':common').file('src/main/resources/').getAbsolutePath()
+    }
+}
+
+publishMods {
+    file = jar.archiveFile
+    modLoaders.add("neoforge")
+}
