@@ -23,7 +23,7 @@ public class ResourceNetherOresDatagen {
         CompletableFuture<HolderLookup.Provider> provider = event.getLookupProvider();
 
         gen.addProvider(event.includeServer(), new ModelProv(output, fileHelper));
-        gen.addProvider(event.includeServer(), BlockLootProv.create(output, provider));
+        gen.addProvider(event.includeServer(), BlockLootProv.create(output));
         gen.addProvider(event.includeServer(), new DataPackProv(output, provider));
 
         BlockTagProv blockTags = gen.addProvider(event.includeServer(), new BlockTagProv(output, provider, fileHelper));

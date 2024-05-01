@@ -1,10 +1,9 @@
 package net.xstopho.resource_nether_ores.worldgen;
 
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -12,7 +11,6 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
-import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.xstopho.resource_nether_ores.OreConstants;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 import net.xstopho.resourcelibrary.registration.RegistryObject;
@@ -29,7 +27,7 @@ public class OreConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_LAPIS_ORE_KEY = createKey("nether_lapis_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_REDSTONE_ORE_KEY = createKey("nether_redstone_ore");
 
-    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         register(context, NETHER_COAL_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_COAL_ORE, 17));
         register(context, NETHER_COPPER_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_COPPER_ORE, 8));
         register(context, NETHER_DIAMOND_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_DIAMOND_ORE, 8));
@@ -49,7 +47,7 @@ public class OreConfiguredFeatures {
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>>
-    void register(BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {
+    void register(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {
         context.register(key, new ConfiguredFeature<>(feature, config));
     }
 }

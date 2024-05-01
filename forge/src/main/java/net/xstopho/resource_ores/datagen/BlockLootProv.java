@@ -1,6 +1,5 @@
 package net.xstopho.resource_ores.datagen;
 
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.data.loot.LootTableProvider;
@@ -13,13 +12,12 @@ import net.xstopho.resourcelibrary.registration.RegistryObject;
 
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.CompletableFuture;
 
 public class BlockLootProv extends BlockLootSubProvider {
 
-    public static LootTableProvider create(PackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
+    public static LootTableProvider create(PackOutput output) {
         return new LootTableProvider(output, Set.of(), List.of(
-                new LootTableProvider.SubProviderEntry(BlockLootProv::new, LootContextParamSets.BLOCK)), provider);
+                new LootTableProvider.SubProviderEntry(BlockLootProv::new, LootContextParamSets.BLOCK)));
     }
 
     protected BlockLootProv() {

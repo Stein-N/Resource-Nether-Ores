@@ -2,7 +2,7 @@ package net.xstopho.resource_ores.worldgen;
 
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
@@ -16,7 +16,7 @@ import net.xstopho.resource_nether_ores.worldgen.OrePlacedFeatures;
 
 public class OreBiomeModifiers {
 
-    private static BootstrapContext<BiomeModifier> contextModifier;
+    private static BootstapContext<BiomeModifier> contextModifier;
 
     public static final ResourceKey<BiomeModifier> ADD_NETHER_COAL_ORE = createKey("add_nether_coal_ore");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_COPPER_ORE = createKey("add_nether_copper_ore");
@@ -26,7 +26,7 @@ public class OreBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NETHER_LAPIS_ORE = createKey("add_nether_lapis_ore");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_REDSTONE_ORE = createKey("add_nether_redstone_ore");
 
-    public static void bootstrap(BootstrapContext<BiomeModifier> context) {
+    public static void bootstrap(BootstapContext<BiomeModifier> context) {
         contextModifier = context;
 
         addModifier(ADD_NETHER_COAL_ORE, OrePlacedFeatures.NETHER_COAL_ORE_FEATURE);

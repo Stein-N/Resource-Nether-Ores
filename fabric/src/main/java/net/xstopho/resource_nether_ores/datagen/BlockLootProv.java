@@ -2,15 +2,13 @@ package net.xstopho.resource_nether_ores.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.Items;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 
-import java.util.concurrent.CompletableFuture;
-
 public class BlockLootProv extends FabricBlockLootTableProvider {
-    public BlockLootProv(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
-        super(dataOutput, registryLookup);
+
+    public BlockLootProv(FabricDataOutput dataOutput) {
+        super(dataOutput);
     }
 
     @Override

@@ -1,6 +1,6 @@
 plugins {
     id 'ml-loader'
-    id 'net.minecraftforge.gradle' version '[6.0.16, 6.2)'
+    id 'net.minecraftforge.gradle' version '[6.0, 6.2)'
     id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
 }
 
@@ -12,7 +12,9 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 
-    implementation("net.xstopho.resourcelibrary:resourcelibrary-forge:${resource_library}")
+    implementation(fg.deobf("net.xstopho.resourcelibrary:resourcelibrary-forge:${resource_library}"))
+
+    implementation(fg.deobf("maven.modrinth:emi:${emi_version}+forge"))
 }
 
 minecraft {
@@ -54,6 +56,8 @@ minecraft {
 
     }
 }
+
+jar.finalizedBy("reobfJar")
 
 sourceSets.each {
     def dir = layout.buildDirectory.dir("sourcesSets/$it.name")

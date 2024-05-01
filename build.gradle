@@ -19,17 +19,19 @@ subprojects {
             modrinth {
                 accessToken = MODRINTH_KEY
                 projectId = modrinth_id
-                minecraftVersions.add("${minecraft_version}")
+
+                requires('resource-library')
             }
             curseforge {
                 accessToken = CURSEFORGE_KEY
                 projectId = curseforge_id
-                minecraftVersions.add("${minecraft_version}")
 
                 clientRequired = true
                 serverRequired = true
 
-                javaVersions.add(JavaVersion.VERSION_21)
+                requires('resource-library')
+
+                javaVersions.add(JavaVersion.VERSION_17)
             }
         }
     }
