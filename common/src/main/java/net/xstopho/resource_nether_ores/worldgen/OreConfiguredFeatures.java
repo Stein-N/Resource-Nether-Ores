@@ -1,4 +1,4 @@
-package net.xstopho.resource_nether_ores.worldgen.util;
+package net.xstopho.resource_nether_ores.worldgen;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
