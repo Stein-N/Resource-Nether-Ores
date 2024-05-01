@@ -10,6 +10,9 @@ dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"
 
     implementation "net.xstopho.resourcelibrary:resourcelibrary-neoforge:${resource_library}"
+
+    // Runtime Mods
+    runtimeOnly "maven.modrinth:emi:${emi_version}+neoforge"
 }
 
 runs {

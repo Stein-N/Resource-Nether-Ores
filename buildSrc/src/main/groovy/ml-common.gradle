@@ -16,6 +16,7 @@ repositories {
     mavenCentral()
     maven { url 'https://raw.githubusercontent.com/Stein-N/resources/main/maven' }
     maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
+    maven { url 'https://api.modrinth.com/maven' }
 }
 
 dependencies {
