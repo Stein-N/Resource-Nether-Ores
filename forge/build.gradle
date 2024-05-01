@@ -11,6 +11,7 @@ base {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
+    implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
 
     implementation("net.xstopho.resourcelibrary:resourcelibrary-forge:${resource_library}")
 }
@@ -55,8 +56,6 @@ minecraft {
     }
 }
 
-jar.finalizedBy("reobfJar")
-
 sourceSets.each {
     def dir = layout.buildDirectory.dir("sourcesSets/$it.name")
     it.output.resourcesDir = dir
@@ -67,6 +66,6 @@ publishMods {
     file = jar.archiveFile
     modLoaders.add("forge")
 
-    modrinth { minecraftVersions.addAll('1.20.1', '1.20.2')}
-    curseforge { minecraftVersions.addAll('1.20.1', '1.20.2')}
+    modrinth { minecraftVersions.add('1.20.6')}
+    curseforge { minecraftVersions.add('1.20.6')}
 }
