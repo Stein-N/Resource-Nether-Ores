@@ -9,15 +9,15 @@ dependencies {
 
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}+${minecraft_version}"
+
+    modImplementation "net.xstopho.resourceconfigapi:resourceconfigapi-fabric:${resource_config_api}"
+    modImplementation "net.xstopho.resourcelibrary:resourcelibrary-fabric:${resource_library}"
 }
 
 loom {
     var aw = project(":common").file("src/main/resources/${mod_id}.accesswidener")
     if (aw.exists()) accessWidenerPath.set(aw)
 
-    mixin {
-        defaultRefmapName.set("${mod_id}.refmap.json")
-    }
     runs {
         client {
             client()
@@ -26,14 +26,8 @@ loom {
             programArgs('--username', 'Dev')
             runDir("runs/client")
         }
-        server {
-            server()
-            setConfigName("Fabric Server")
-            ideConfigGenerated(true)
-            runDir("runs/client")
-        }
         datagen {
-            inherit server
+            inherit client
             name "Fabric Datagen"
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/generated")}"

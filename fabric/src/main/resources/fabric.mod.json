@@ -19,14 +19,12 @@
             "net.xstopho.examplemod.ExampleMod"
         ]
     },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
-    ],
     "depends": {
         "fabric-api": "*",
         "fabricloader": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=17"
+        "java": ">=17",
+        "resourceconfigapi": "${resource_config_api}",
+        "resourcelibrary": "${resource_library}"
     }
 }
