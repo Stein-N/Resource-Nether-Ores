@@ -2,10 +2,6 @@ plugins {
     id 'java-library'
 }
 
-base {
-    archivesName = "$mod_id-$project.name"
-}
-
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
     withSourcesJar()
@@ -53,10 +49,6 @@ processResources {
             "fabric_loader_version": fabric_loader_version,
             "fabric_api_version": fabric_api_version,
 
-            // NeoForge Keys
-            "neoforge_version": neoforge_version,
-            "neoforge_loader_version_range": neoforge_loader_version_range,
-
             // Forge Keys
             "forge_version": forge_version,
             "forge_version_range": forge_version_range,
@@ -66,7 +58,7 @@ processResources {
             "resource_library": resource_library
     ]
 
-    filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/neoforge.mods.toml', 'META-INF/mods.toml', '*.mixins.json']) {
+    filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {
         expand expandProps
     }
     inputs.properties(expandProps)
