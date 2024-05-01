@@ -37,8 +37,9 @@ public class BlockRegistry {
             () -> new RedStoneOreBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_ORE)));
 
     private static RegistryObject<Block> register(String id, Supplier<Block> block) {
-        ITEMS.register(id, () -> new BlockItem(block.get(), new Item.Properties()));
-        return BLOCKS.register(id, block);
+        RegistryObject<Block> toReturn = BLOCKS.register(id, block);
+        ITEMS.register(id, () -> new BlockItem(toReturn.get(), new Item.Properties()));
+        return toReturn;
     }
 
     public static void init() {}
