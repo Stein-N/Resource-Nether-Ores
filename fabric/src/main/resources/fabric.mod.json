@@ -24,7 +24,6 @@
         "fabricloader": "*",
         "minecraft": "${minecraft_version}",
         "java": ">=17",
-        "resourceconfigapi": "${resource_config_api}",
         "resourcelibrary": "${resource_library}"
     }
 }

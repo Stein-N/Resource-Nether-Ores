@@ -9,7 +9,6 @@ if (at.exists()) minecraft.accessTransformers.file at
 dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"
 
-    implementation "net.xstopho.resourceconfigapi:resourceconfigapi-neoforge:${resource_config_api}"
     implementation "net.xstopho.resourcelibrary:resourcelibrary-neoforge:${resource_library}"
 }
 

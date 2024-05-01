@@ -25,13 +25,6 @@ license = "${mod_license}"
     side = "BOTH"
 
 [[dependencies.${mod_id}]]
-    modId = "resourceconfigapi"
-    required = true
-    versionRange = "[${resource_config_api},)"
-    ordering = "NONE"
-    side = "BOTH"
-
-[[dependencies.${mod_id}]]
     modId = "resourcelibrary"
     required = true
     versionRange = "[${resource_library},)"
