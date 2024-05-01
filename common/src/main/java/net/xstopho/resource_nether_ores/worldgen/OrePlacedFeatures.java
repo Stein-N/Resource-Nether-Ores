@@ -2,7 +2,7 @@ package net.xstopho.resource_nether_ores.worldgen;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -25,7 +25,7 @@ public class OrePlacedFeatures {
     public static final ResourceKey<PlacedFeature> NETHER_LAPIS_ORE_FEATURE = createKey("nether_lapis_ore_feature");
     public static final ResourceKey<PlacedFeature> NETHER_REDSTONE_ORE_FEATURE = createKey("nether_redstone_ore_feature");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var lookup = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, NETHER_COAL_ORE_FEATURE, lookup.getOrThrow(OreConfiguredFeatures.NETHER_COAL_ORE_KEY), common(20, 25, 115));
@@ -45,7 +45,7 @@ public class OrePlacedFeatures {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(OreConstants.MOD_ID, id));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
                                  Holder<ConfiguredFeature<?, ?>> config, List<PlacementModifier> modifer) {
         context.register(key, new PlacedFeature(config, List.copyOf(modifer)));
     }
