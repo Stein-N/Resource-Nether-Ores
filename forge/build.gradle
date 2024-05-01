@@ -5,7 +5,7 @@ plugins {
 }
 
 base {
-    archivesName = "${mod_id}-forge-1.20.1-1.20.2"
+    archivesName = "${mod_id}-forge-1.20.3-1.20.4"
 }
 
 dependencies {
@@ -13,8 +13,6 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 
     implementation(fg.deobf("net.xstopho.resourcelibrary:resourcelibrary-forge:${resource_library}"))
-
-    implementation(fg.deobf("maven.modrinth:emi:${emi_version}+forge"))
 }
 
 minecraft {
