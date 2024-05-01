@@ -31,7 +31,7 @@ subprojects {
 
                 requires('resource-library')
 
-                javaVersions.add(JavaVersion.VERSION_17)
+                javaVersions.add(JavaVersion.VERSION_21)
             }
         }
     }
