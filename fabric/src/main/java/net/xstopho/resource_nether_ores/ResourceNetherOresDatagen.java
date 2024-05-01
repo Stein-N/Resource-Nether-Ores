@@ -2,6 +2,7 @@ package net.xstopho.resource_nether_ores;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.xstopho.resource_nether_ores.datagen.BlockLootProv;
 import net.xstopho.resource_nether_ores.datagen.ModelProv;
 
 public class ResourceNetherOresDatagen implements DataGeneratorEntrypoint {
@@ -10,5 +11,6 @@ public class ResourceNetherOresDatagen implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(ModelProv::new);
+        pack.addProvider(BlockLootProv::new);
     }
 }
