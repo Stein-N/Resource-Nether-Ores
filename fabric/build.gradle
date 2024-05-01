@@ -49,6 +49,12 @@ publishMods {
     file = remapJar.archiveFile
     modLoaders.addAll("fabric", "quilt")
 
-    modrinth { minecraftVersions.addAll('1.20.5', '1.20.6')}
-    curseforge { minecraftVersions.addAll('1.20.5', '1.20.6')}
+    modrinth {
+        minecraftVersions.addAll('1.20.5', '1.20.6')
+        requires('fabric-api')
+    }
+    curseforge {
+        minecraftVersions.addAll('1.20.5', '1.20.6')
+        requires('fabric-api')
+    }
 }
