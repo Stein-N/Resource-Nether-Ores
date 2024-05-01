@@ -9,6 +9,7 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.xstopho.resource_ores.datagen.BlockLootProv;
+import net.xstopho.resource_ores.datagen.DataPackProv;
 import net.xstopho.resource_ores.datagen.ModelProv;
 
 import java.util.concurrent.CompletableFuture;
@@ -25,7 +26,7 @@ public class ResourceNetherOresDatagen {
 
         gen.addProvider(event.includeServer(), new ModelProv(output, fileHelper));
         gen.addProvider(event.includeServer(), BlockLootProv.create(output, provider));
-
+        gen.addProvider(event.includeServer(), new DataPackProv(output, provider));
 
     }
 }
