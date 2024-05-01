@@ -1,0 +1,36 @@
+plugins {
+    id 'ml-loader'
+    id 'net.neoforged.gradle.userdev' version '7.0.107'
+}
+
+base {
+    archivesName = "${mod_id}-neoforge-1.20.6"
+}
+
+dependencies {
+    implementation "net.neoforged:neoforge:${neoforge_version}"
+
+    implementation "net.xstopho.resourcelibrary:resourcelibrary-neoforge:${resource_library}"
+
+    runtimeOnly "maven.modrinth:emi:${emi_version}+neoforge"
+}
+
+runs {
+    configureEach {
+        modSource project.sourceSets.main
+    }
+    client {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+    }
+    data {
+        programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated').getAbsolutePath(), '--existing', project(':common').file('src/main/resources').getAbsolutePath()
+    }
+}
+
+publishMods {
+    file = jar.archiveFile
+    modLoaders.add("neoforge")
+
+    modrinth { minecraftVersions.addAll('1.20.4')}
+    curseforge { minecraftVersions.addAll('1.20.4')}
+}
