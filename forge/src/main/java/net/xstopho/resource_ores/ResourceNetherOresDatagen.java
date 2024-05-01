@@ -27,5 +27,6 @@ public class ResourceNetherOresDatagen {
         gen.addProvider(event.includeServer(), new DataPackProv(output, provider));
 
         BlockTagProv blockTags = gen.addProvider(event.includeServer(), new BlockTagProv(output, provider, fileHelper));
+        gen.addProvider(event.includeServer(), new ItemTagProv(output, provider, blockTags.contentsGetter(), fileHelper));
     }
 }
