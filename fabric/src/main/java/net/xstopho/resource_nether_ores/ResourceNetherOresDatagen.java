@@ -4,9 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
-import net.xstopho.resource_nether_ores.datagen.BlockLootProv;
-import net.xstopho.resource_nether_ores.datagen.ModelProv;
-import net.xstopho.resource_nether_ores.datagen.WorldGenProv;
+import net.xstopho.resource_nether_ores.datagen.*;
 import net.xstopho.resource_nether_ores.worldgen.OreConfiguredFeatures;
 import net.xstopho.resource_nether_ores.worldgen.OrePlacedFeatures;
 
@@ -18,6 +16,8 @@ public class ResourceNetherOresDatagen implements DataGeneratorEntrypoint {
         pack.addProvider(ModelProv::new);
         pack.addProvider(BlockLootProv::new);
         pack.addProvider(WorldGenProv::new);
+        pack.addProvider(BlockTagProv::new);
+        pack.addProvider(ItemTagProv::new);
     }
 
     @Override
