@@ -16,5 +16,5 @@ plugins {
 rootProject.name = 'Resource-Nether-Ores-1.20.5-1.20.6'
 include("common")
 include("fabric")
-include("forge") // remove with 1.21
+//include("forge") // remove with 1.21
 include("neoforge")
