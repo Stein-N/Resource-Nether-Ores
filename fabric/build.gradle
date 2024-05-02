@@ -52,10 +52,10 @@ publishMods {
 
     modrinth {
         minecraftVersions.addAll('1.20', '1.20.1', '1.20.2')
-        requires('fabric_api')
+        requires('fabric-api')
     }
     curseforge {
         minecraftVersions.addAll('1.20', '1.20.1', '1.20.2')
-        requires('fabric_api')
+        requires('fabric-api')
     }
 }
