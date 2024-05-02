@@ -12,7 +12,7 @@
         "sources": "https://github.com/FabricMC/fabric-example-mod"
     },
     "license": "${mod_license}",
-    "icon": "icon.png",
+    "icon": "logo_fabric.png",
     "environment": "*",
     "entrypoints": {
         "main": [ "net.xstopho.resource_nether_ores.ResourceNetherOres" ],
