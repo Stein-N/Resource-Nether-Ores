@@ -18,6 +18,7 @@ dependencies {
 
     // Runtime Mods
     modRuntimeOnly "maven.modrinth:emi:${emi_version}+fabric"
+    modRuntimeOnly "maven.modrinth:modmenu:${mod_menu}"
 }
 
 loom {
@@ -49,6 +50,12 @@ publishMods {
     file = remapJar.archiveFile
     modLoaders.addAll("fabric", "quilt")
 
-    modrinth { minecraftVersions.addAll('1.20', '1.20.1', '1.20.2')}
-    curseforge { minecraftVersions.addAll('1.20', '1.20.1', '1.20.2')}
+    modrinth {
+        minecraftVersions.addAll('1.20', '1.20.1', '1.20.2')
+        requires('fabric_api')
+    }
+    curseforge {
+        minecraftVersions.addAll('1.20', '1.20.1', '1.20.2')
+        requires('fabric_api')
+    }
 }
