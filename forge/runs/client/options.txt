@@ -42,8 +42,8 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:[]
-incompatibleResourcePacks:[]
+resourcePacks:["vanilla","mod_resources","file/Faithful 64x - Release 4.zip"]
+incompatibleResourcePacks:["file/Faithful 64x - Release 4.zip"]
 lastServer:
 lang:en_us
 soundDevice:""
