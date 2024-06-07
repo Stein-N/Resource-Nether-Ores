@@ -1,3 +1,7 @@
+#### v1.1.0
+- fixing an error with the needed ResourceLibrary version on Fabric
+- all Nether Ores now respects your active ResourcePack
+
 #### v1.0.1
 - adding missing Mod Icons
 
