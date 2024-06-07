@@ -16,6 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [ "net.xstopho.resource_nether_ores.ResourceNetherOres" ],
+        "client": [ "net.xstopho.resource_nether_ores.ResourceNetherOresClient" ],
         "fabric-datagen": [ "net.xstopho.resource_nether_ores.ResourceNetherOresDatagen" ]
     },
     "depends": {

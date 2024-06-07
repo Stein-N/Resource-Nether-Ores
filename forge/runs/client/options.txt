@@ -1,4 +1,4 @@
-version:3465
+version:3700
 autoJump:false
 operatorItemsTab:false
 autoSuggestions:true
@@ -21,6 +21,7 @@ toggleCrouch:false
 toggleSprint:false
 darkMojangStudiosBackground:false
 hideLightningFlashes:false
+hideSplashTexts:false
 mouseSensitivity:0.2535211267605634
 fov:0.5
 screenEffectScale:1.0
@@ -30,6 +31,7 @@ glintSpeed:0.5
 glintStrength:0.75
 damageTiltStrength:1.0
 highContrast:false
+narratorHotkey:true
 gamma:0.5
 renderDistance:12
 simulationDistance:12
@@ -42,8 +44,8 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:[]
-incompatibleResourcePacks:[]
+resourcePacks:["vanilla","mod_resources","file/Faithful 64x - Release 4.zip"]
+incompatibleResourcePacks:["file/Faithful 64x - Release 4.zip"]
 lastServer:
 lang:en_us
 soundDevice:""
