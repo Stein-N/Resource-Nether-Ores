@@ -1,8 +1,10 @@
 package net.xstopho.resource_ores.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.xstopho.resource_nether_ores.OreConstants;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
@@ -15,16 +17,26 @@ public class ModelProv extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        createTrivialCube(BlockRegistry.NETHER_COAL_ORE);
-        createTrivialCube(BlockRegistry.NETHER_COPPER_ORE);
-        createTrivialCube(BlockRegistry.NETHER_IRON_ORE);
-        createTrivialCube(BlockRegistry.NETHER_DIAMOND_ORE);
-        createTrivialCube(BlockRegistry.NETHER_EMERALD_ORE);
-        createTrivialCube(BlockRegistry.NETHER_LAPIS_ORE);
-        createTrivialCube(BlockRegistry.NETHER_REDSTONE_ORE);
+        createTrivialCube(BlockRegistry.NETHER_COAL_ORE, "coal_ore");
+        createTrivialCube(BlockRegistry.NETHER_COPPER_ORE, "copper_ore");
+        createTrivialCube(BlockRegistry.NETHER_IRON_ORE, "iron_ore");
+        createTrivialCube(BlockRegistry.NETHER_DIAMOND_ORE, "diamond_ore");
+        createTrivialCube(BlockRegistry.NETHER_EMERALD_ORE, "emerald_ore");
+        createTrivialCube(BlockRegistry.NETHER_LAPIS_ORE, "lapis_ore");
+        createTrivialCube(BlockRegistry.NETHER_REDSTONE_ORE, "redstone_ore");
     }
 
-    void createTrivialCube(RegistryObject<Block> block) {
-        simpleBlockWithItem(block.get(), cubeAll(block.get()));
+    void createTrivialCube(RegistryObject<Block> block, String textureKey) {
+        simpleBlockWithItem(block.get(), createLayeredNetherOreBlock(textureKey).model);
+    }
+
+    private ConfiguredModel createLayeredNetherOreBlock(String textureKey) {
+        return new ConfiguredModel(models().withExistingParent("nether_" + textureKey, location("block/simple_cube"))
+                .texture("all", new ResourceLocation("block/netherrack"))
+                .texture("layer0", location("block/" + textureKey)));
+    }
+
+    private ResourceLocation location(String path) {
+        return new ResourceLocation(OreConstants.MOD_ID, path);
     }
 }
