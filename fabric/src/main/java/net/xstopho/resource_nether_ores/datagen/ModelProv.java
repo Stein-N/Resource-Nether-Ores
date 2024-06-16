@@ -38,13 +38,13 @@ public class ModelProv extends FabricModelProvider {
 
     private void createLayeredNetherOreBlock(BlockModelGenerators generator, RegistryObject<Block> block, String textureKey) {
         TextureMapping map = new TextureMapping();
-        Optional<ResourceLocation> parent = Optional.of(new ResourceLocation(OreConstants.MOD_ID, "block/simple_cube"));
+        Optional<ResourceLocation> parent = Optional.of(ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/simple_cube"));
 
-        map.put(TextureSlot.ALL, new ResourceLocation("block/netherrack"));
-        map.put(TextureSlot.LAYER0, new ResourceLocation(OreConstants.MOD_ID, "block/" + textureKey));
+        map.put(TextureSlot.ALL, ResourceLocation.withDefaultNamespace("block/netherrack"));
+        map.put(TextureSlot.LAYER0, ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/" + textureKey));
 
         ResourceLocation model = new ModelTemplate(parent, Optional.empty(), TextureSlot.ALL, TextureSlot.LAYER0)
-                .create(new ResourceLocation(OreConstants.MOD_ID, "block/nether_" + textureKey), map, generator.modelOutput);
+                .create(ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/nether_" + textureKey), map, generator.modelOutput);
         generator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block.get(), model));
     }
 }

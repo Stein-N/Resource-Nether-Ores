@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.xstopho.resource_nether_ores.tags.OreTags;
-import net.xstopho.resourcelibrary.items.tags.TagHelper;
 
 import java.util.concurrent.CompletableFuture;
 
