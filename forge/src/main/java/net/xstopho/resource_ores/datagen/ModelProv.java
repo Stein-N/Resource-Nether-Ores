@@ -32,11 +32,11 @@ public class ModelProv extends BlockStateProvider {
 
     private ConfiguredModel createLayeredNetherOreBlock(String textureKey) {
         return new ConfiguredModel(models().withExistingParent("nether_" + textureKey, location("block/simple_cube"))
-                .texture("all", new ResourceLocation("block/netherrack"))
+                .texture("all", ResourceLocation.withDefaultNamespace("block/netherrack"))
                 .texture("layer0", location("block/" + textureKey)));
     }
 
     private ResourceLocation location(String path) {
-        return new ResourceLocation(OreConstants.MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, path);
     }
 }

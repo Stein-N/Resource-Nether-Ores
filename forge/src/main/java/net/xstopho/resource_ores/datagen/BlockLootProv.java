@@ -22,8 +22,8 @@ public class BlockLootProv extends BlockLootSubProvider {
                 new LootTableProvider.SubProviderEntry(BlockLootProv::new, LootContextParamSets.BLOCK)), provider);
     }
 
-    protected BlockLootProv() {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+    protected BlockLootProv(HolderLookup.Provider provider) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
     }
 
     @Override

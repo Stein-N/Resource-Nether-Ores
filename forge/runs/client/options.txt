@@ -1,5 +1,5 @@
-version:3839
-ao:true
+version:3953
+ao:false
 biomeBlendRadius:2
 enableVsync:true
 entityDistanceScaling:1.0
@@ -7,22 +7,22 @@ entityShadows:true
 forceUnicodeFont:false
 japaneseGlyphVariants:false
 fov:0.5
-fovEffectScale:1.0
+fovEffectScale:0.25353352509422733
 darknessEffectScale:1.0
 glintSpeed:0.5
 glintStrength:0.75
 prioritizeChunkUpdates:0
 fullscreen:true
 gamma:0.5
-graphicsMode:1
+graphicsMode:0
 guiScale:2
 maxFps:120
-mipmapLevels:4
+mipmapLevels:0
 narrator:0
-particles:0
+particles:1
 reducedDebugInfo:false
-renderClouds:"true"
-renderDistance:12
+renderClouds:"fast"
+renderDistance:7
 simulationDistance:12
 screenEffectScale:1.0
 soundDevice:""
@@ -48,7 +48,7 @@ mouseSensitivity:0.2535211267605634
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","mod_resources","file/Faithful 64x - Release 4.zip"]
+resourcePacks:["vanilla","mod_resources"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -86,7 +86,7 @@ onlyShowSecureChat:false
 panoramaScrollSpeed:1.0
 telemetryOptInExtra:false
 onboardAccessibility:false
-menuBackgroundBlurriness:0.5
+menuBackgroundBlurriness:5
 key_key.attack:key.mouse.left
 key_key.use:key.mouse.right
 key_key.forward:key.keyboard.w
