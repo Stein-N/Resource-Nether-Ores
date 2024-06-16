@@ -1,3 +1,6 @@
+#### v2.0.0
+- initial Update to 1.21
+
 #### v1.1.0
 - fixing an error with the needed ResourceLibrary version on Fabric
 - all Nether Ores now respects your active ResourcePack
