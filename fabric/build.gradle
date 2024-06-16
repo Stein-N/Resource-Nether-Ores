@@ -4,7 +4,7 @@ plugins {
 }
 
 base {
-    archivesName = "${mod_id}-fabric-1.20.5-1.20.6"
+    archivesName = "${mod_id}-fabric-${minecraft_version}"
 }
 
 dependencies {
@@ -17,8 +17,8 @@ dependencies {
     modImplementation "net.xstopho.resourcelibrary:resourcelibrary-fabric:${resource_library}"
 
     // Runtime Mods
-    modRuntimeOnly "maven.modrinth:emi:${emi_version}+fabric"
-    modRuntimeOnly "maven.modrinth:modmenu:${mod_menu}"
+    //modRuntimeOnly "maven.modrinth:emi:${emi_version}+fabric"
+    //modRuntimeOnly "maven.modrinth:modmenu:${mod_menu}"
 }
 
 loom {
@@ -51,11 +51,11 @@ publishMods {
     modLoaders.addAll("fabric", "quilt")
 
     modrinth {
-        minecraftVersions.addAll('1.20.5', '1.20.6')
+        minecraftVersions.addAll('1.21')
         requires('fabric-api')
     }
     curseforge {
-        minecraftVersions.addAll('1.20.5', '1.20.6')
+        minecraftVersions.addAll('1.21')
         requires('fabric-api')
     }
 }

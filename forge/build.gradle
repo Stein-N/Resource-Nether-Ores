@@ -5,7 +5,7 @@ plugins {
 }
 
 base {
-    archivesName = "${mod_id}-forge-1.20.6"
+    archivesName = "${mod_id}-forge-${minecraft_version}"
 }
 
 dependencies {
@@ -66,6 +66,6 @@ publishMods {
     file = jar.archiveFile
     modLoaders.add("forge")
 
-    modrinth { minecraftVersions.add('1.20.6')}
-    curseforge { minecraftVersions.add('1.20.6')}
+    modrinth { minecraftVersions.addAll('1.21')}
+    curseforge { minecraftVersions.addAll('1.21')}
 }
