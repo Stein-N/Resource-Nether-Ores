@@ -43,7 +43,7 @@ public class OreConfiguredFeatures {
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String id) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(OreConstants.MOD_ID, id));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, id));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>>

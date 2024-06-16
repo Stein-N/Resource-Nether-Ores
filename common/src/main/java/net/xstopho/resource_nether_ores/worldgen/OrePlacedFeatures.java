@@ -42,7 +42,7 @@ public class OrePlacedFeatures {
     }
 
     private static ResourceKey<PlacedFeature> createKey(String id) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(OreConstants.MOD_ID, id));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, id));
     }
 
     private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
