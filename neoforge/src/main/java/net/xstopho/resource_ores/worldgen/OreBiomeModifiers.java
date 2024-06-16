@@ -46,6 +46,6 @@ public class OreBiomeModifiers {
     }
 
     private static ResourceKey<BiomeModifier> createKey(String id) {
-        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(OreConstants.MOD_ID, id));
+        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, id));
     }
 }
