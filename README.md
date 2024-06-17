@@ -7,4 +7,6 @@
 
 ### Ores get Generated in a Vanilla fashion when it comes to amount per chunk and vein size
 
+### It also respects your current Resource pack
+
 ![Block Preview Render](https://raw.githubusercontent.com/Stein-N/resources/main/images/resource_ores/nether/block_render.png)

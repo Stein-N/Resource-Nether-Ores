@@ -50,10 +50,6 @@ publishMods {
     file = remapJar.archiveFile
     modLoaders.addAll("fabric", "quilt")
 
-    modrinth {
-        requires('fabric-api')
-    }
-    curseforge {
-        requires('fabric-api')
-    }
+    modrinth { requires('fabric-api') }
+    curseforge { requires('fabric-api') }
 }
