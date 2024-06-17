@@ -67,7 +67,4 @@ sourceSets.each {
 publishMods {
     file = jar.archiveFile
     modLoaders.add("forge")
-
-    modrinth { minecraftVersions.addAll('1.21')}
-    curseforge { minecraftVersions.addAll('1.21')}
 }

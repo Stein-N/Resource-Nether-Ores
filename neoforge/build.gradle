@@ -30,7 +30,4 @@ runs {
 publishMods {
     file = jar.archiveFile
     modLoaders.add("neoforge")
-
-    modrinth { minecraftVersions.addAll('1.21') }
-    curseforge { minecraftVersions.addAll('1.21') }
 }

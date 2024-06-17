@@ -51,11 +51,9 @@ publishMods {
     modLoaders.addAll("fabric", "quilt")
 
     modrinth {
-        minecraftVersions.addAll('1.21')
         requires('fabric-api')
     }
     curseforge {
-        minecraftVersions.addAll('1.21')
         requires('fabric-api')
     }
 }

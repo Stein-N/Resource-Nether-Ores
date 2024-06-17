@@ -20,6 +20,8 @@ subprojects {
                 accessToken = MODRINTH_API_KEY
                 projectId = modrinth_id
 
+                minecraftVersions.add(minecraft_version)
+
                 requires('resource-library')
             }
             curseforge {
@@ -28,6 +30,8 @@ subprojects {
 
                 clientRequired = true
                 serverRequired = true
+
+                minecraftVersions.add(minecraft_version)
 
                 requires('resource-library')
 
