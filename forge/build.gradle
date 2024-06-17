@@ -14,6 +14,8 @@ dependencies {
     implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
 
     implementation("net.xstopho.resourcelibrary:resourcelibrary-forge:${resource_library}")
+
+    runtimeOnly("maven.modrinth:jei:${jei_version}-forge")
 }
 
 minecraft {

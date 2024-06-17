@@ -17,8 +17,8 @@ dependencies {
     modImplementation "net.xstopho.resourcelibrary:resourcelibrary-fabric:${resource_library}"
 
     // Runtime Mods
-    //modRuntimeOnly "maven.modrinth:emi:${emi_version}+fabric"
-    //modRuntimeOnly "maven.modrinth:modmenu:${mod_menu}"
+    modRuntimeOnly "maven.modrinth:emi:${emi_version}+fabric"
+    modRuntimeOnly "maven.modrinth:modmenu:${mod_menu_version}"
 }
 
 loom {
