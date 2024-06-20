@@ -9,6 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.xstopho.resource_nether_ores.OreConstants;
+import net.xstopho.resource_nether_ores.client.ResourcePackHelper;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 import net.xstopho.resource_nether_ores.registries.CreativeTabRegistry;
 
@@ -32,6 +33,10 @@ public class ResourceOres {
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_EMERALD_ORE.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_LAPIS_ORE.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_REDSTONE_ORE.get(), RenderType.cutout());
+
+
+            ResourcePackHelper.extractPack("Resource Nether Ores x32");
+            ResourcePackHelper.extractPack("Resource Nether Ores x64");
         }
     }
 }
