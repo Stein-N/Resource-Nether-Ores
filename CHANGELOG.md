@@ -1,3 +1,7 @@
+#### v2.0.1
+- x32 and x64 Resource Packs are now shipped with the Mod
+- they get automatically be added to your resourcepacks folder
+
 #### v2.0.0
 - initial Update to 1.21
 
