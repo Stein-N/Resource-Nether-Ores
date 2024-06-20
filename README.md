@@ -3,10 +3,11 @@
 
 ![Title-Header](https://raw.githubusercontent.com/Stein-N/resources/main/images/resource_ores/nether/Title_Header_Nether.png)
 
-### Quite a simple Mod that adds all Vanilla Ores to the Nether Dimension.
+### Add all Vanilla Ores to the Nether Dimension
 
-### Ores get Generated in a Vanilla fashion when it comes to amount per chunk and vein size
-
-### It also respects your current Resource pack
+#### Features:
+- Ores get generated in a Vanilla fashion when it comes to Vein Size and amount per Chunk
+- It respects your current Enabled Resourcepack
+- Also it is shipped with x32 and x64 Resourcepack, wich get added to your resourcpacks folder
 
 ![Block Preview Render](https://raw.githubusercontent.com/Stein-N/resources/main/images/resource_ores/nether/block_render.png)
