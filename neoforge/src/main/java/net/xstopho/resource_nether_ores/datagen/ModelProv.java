@@ -1,4 +1,4 @@
-package net.xstopho.resource_ores.datagen;
+package net.xstopho.resource_nether_ores.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;

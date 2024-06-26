@@ -1,4 +1,4 @@
-package net.xstopho.resource_ores;
+package net.xstopho.resource_nether_ores;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -6,10 +6,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.xstopho.resource_nether_ores.OreConstants;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 import net.xstopho.resource_nether_ores.registries.CreativeTabRegistry;
-import net.xstopho.resource_ores.client.ResourcePackHelper;
+import net.xstopho.resource_nether_ores.client.ResourcePackHelper;
 
 @Mod(OreConstants.MOD_ID)
 public class ResourceNetherOres {

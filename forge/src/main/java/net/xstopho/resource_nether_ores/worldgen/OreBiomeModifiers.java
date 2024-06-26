@@ -1,4 +1,4 @@
-package net.xstopho.resource_ores.worldgen;
+package net.xstopho.resource_nether_ores.worldgen;
 
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;

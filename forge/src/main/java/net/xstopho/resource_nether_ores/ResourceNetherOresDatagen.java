@@ -1,4 +1,4 @@
-package net.xstopho.resource_ores;
+package net.xstopho.resource_nether_ores;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -8,7 +8,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.xstopho.resource_ores.datagen.*;
+import net.xstopho.resource_nether_ores.datagen.*;
 
 import java.util.concurrent.CompletableFuture;
 

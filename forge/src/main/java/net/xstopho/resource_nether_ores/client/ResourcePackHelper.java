@@ -1,4 +1,4 @@
-package net.xstopho.resource_ores.client;
+package net.xstopho.resource_nether_ores.client;
 
 import net.minecraft.client.Minecraft;
 import net.xstopho.resource_nether_ores.OreConstants;

@@ -1,4 +1,4 @@
-package net.xstopho.resource_ores.worldgen;
+package net.xstopho.resource_nether_ores.worldgen;
 
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -12,7 +12,6 @@ import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.xstopho.resource_nether_ores.OreConstants;
-import net.xstopho.resource_nether_ores.worldgen.OrePlacedFeatures;
 
 public class OreBiomeModifiers {
 

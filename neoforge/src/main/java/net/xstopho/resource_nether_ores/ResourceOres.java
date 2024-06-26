@@ -1,4 +1,4 @@
-package net.xstopho.resource_ores;
+package net.xstopho.resource_nether_ores;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -13,11 +13,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
-import net.xstopho.resource_nether_ores.OreConstants;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 import net.xstopho.resource_nether_ores.registries.CreativeTabRegistry;
-
-import java.awt.*;
 
 @Mod(OreConstants.MOD_ID)
 public class ResourceOres {
