@@ -64,6 +64,10 @@ sourceSets.each {
     it.java.destinationDirectory = dir
 }
 
+processResources{
+    exclude('resourcepacks')
+}
+
 publishMods {
     file = jar.archiveFile
     modLoaders.add("forge")

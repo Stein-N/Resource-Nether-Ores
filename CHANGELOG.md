@@ -1,3 +1,7 @@
+#### v2.0.2
+Fabric/NeoForge:
+- changed the way how the built-in resource packs get registered 
+
 #### v2.0.1
 - x32 and x64 Resource Packs are now shipped with the Mod
 - they get automatically be added to your resourcepacks folder

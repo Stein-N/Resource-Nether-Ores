@@ -1,4 +1,4 @@
-package net.xstopho.resource_nether_ores.client;
+package net.xstopho.resource_ores.client;
 
 import net.minecraft.client.Minecraft;
 import net.xstopho.resource_nether_ores.OreConstants;
@@ -10,7 +10,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ResourcePackHelper {
-
     public static void extractPack(String name) {
         Path resourcepackPath = Minecraft.getInstance().getResourcePackDirectory();
 

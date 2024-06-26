@@ -48,7 +48,7 @@ mouseSensitivity:0.2535211267605634
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","mod_resources"]
+resourcePacks:["vanilla","mod_resources","mod/resource_nether_ores:resourcepacks/resource_nether_ores_x64"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
