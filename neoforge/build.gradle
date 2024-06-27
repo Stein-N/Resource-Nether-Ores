@@ -1,6 +1,7 @@
 plugins {
     id 'ml-loader'
-    id 'net.neoforged.gradle.userdev' version '7.0.142'
+    id 'net.neoforged.gradle.userdev' version '7.0.151'
+    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
 }
 
 base {

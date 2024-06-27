@@ -1,6 +1,7 @@
 plugins {
     id 'ml-loader'
     id 'fabric-loom' version '1.6-SNAPSHOT'
+    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
 }
 
 base {

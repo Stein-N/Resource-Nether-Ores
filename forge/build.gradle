@@ -2,6 +2,7 @@ plugins {
     id 'ml-loader'
     id 'net.minecraftforge.gradle' version '[6.0.24, 6.2)'
     id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
+    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
 }
 
 base {
