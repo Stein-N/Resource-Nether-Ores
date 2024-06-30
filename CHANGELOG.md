@@ -1,3 +1,6 @@
+#### v2.0.3
+- adding Chinese(simplified) translation
+
 #### v2.0.2
 Fabric/NeoForge:
 - changed the way how the built-in resource packs get registered 
