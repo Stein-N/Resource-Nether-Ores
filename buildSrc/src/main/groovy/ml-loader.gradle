@@ -1,5 +1,6 @@
 plugins {
     id 'ml-common'
+    id 'ml-loader-publish'
 }
 
 dependencies {
