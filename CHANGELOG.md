@@ -1,3 +1,6 @@
+#### v2.0.4
+- Hotfix Mod assets where missing
+
 #### v2.0.3
 - adding Chinese(simplified) translation
 
