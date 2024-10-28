@@ -8,6 +8,7 @@ import net.minecraft.server.packs.*;
 import net.minecraft.server.packs.repository.KnownPack;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.forgespi.language.IModInfo;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 import net.xstopho.resource_nether_ores.registries.CreativeTabRegistry;
+import net.xstopho.resourcelibrary.registration.RegistryObject;
 import org.apache.maven.artifact.versioning.ArtifactVersion;
 
 import java.nio.file.Path;
@@ -36,13 +38,9 @@ public class ResourceNetherOres {
 
         @SubscribeEvent
         public static void renderSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_COAL_ORE.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_COPPER_ORE.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_IRON_ORE.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_DIAMOND_ORE.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_EMERALD_ORE.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_LAPIS_ORE.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.NETHER_REDSTONE_ORE.get(), RenderType.cutout());
+            BlockRegistry.BLOCKS.getEntries().forEach(registryObject -> {
+                ItemBlockRenderTypes.setRenderLayer(registryObject.get(), RenderType.cutout());
+            });
         }
 
         @SubscribeEvent

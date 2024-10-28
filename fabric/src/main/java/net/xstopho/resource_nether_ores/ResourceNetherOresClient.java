@@ -14,8 +14,10 @@ public class ResourceNetherOresClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), BlockRegistry.NETHER_COAL_ORE.get(), BlockRegistry.NETHER_COPPER_ORE.get(), BlockRegistry.NETHER_IRON_ORE.get(),
-                BlockRegistry.NETHER_DIAMOND_ORE.get(), BlockRegistry.NETHER_EMERALD_ORE.get(), BlockRegistry.NETHER_LAPIS_ORE.get(), BlockRegistry.NETHER_REDSTONE_ORE.get());
+
+        BlockRegistry.BLOCKS.getEntries().forEach(registryObject -> {
+            BlockRenderLayerMap.INSTANCE.putBlock(registryObject.get(), RenderType.cutout());
+        });
 
         FabricLoader.getInstance().getModContainer(OreConstants.MOD_ID).ifPresent(modContainer -> {
                     ResourceManagerHelper.registerBuiltinResourcePack(location("resource_nether_ores_x32"), modContainer, Component.literal("Resource Nether Ores x32"), ResourcePackActivationType.NORMAL);
