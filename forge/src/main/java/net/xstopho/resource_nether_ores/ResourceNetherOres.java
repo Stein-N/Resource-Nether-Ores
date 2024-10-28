@@ -8,7 +8,6 @@ import net.minecraft.server.packs.*;
 import net.minecraft.server.packs.repository.KnownPack;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,7 +17,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.forgespi.language.IModInfo;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 import net.xstopho.resource_nether_ores.registries.CreativeTabRegistry;
-import net.xstopho.resourcelibrary.registration.RegistryObject;
 import org.apache.maven.artifact.versioning.ArtifactVersion;
 
 import java.nio.file.Path;

@@ -7,9 +7,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.xstopho.resource_nether_ores.OreConstants;
+import net.xstopho.resource_nether_ores.worldgen.OreBiomeModifiers;
 import net.xstopho.resource_nether_ores.worldgen.OreConfiguredFeatures;
 import net.xstopho.resource_nether_ores.worldgen.OrePlacedFeatures;
-import net.xstopho.resource_nether_ores.worldgen.OreBiomeModifiers;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;

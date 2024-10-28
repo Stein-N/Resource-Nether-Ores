@@ -18,7 +18,6 @@ import net.xstopho.resourcelibrary.registration.RegistryObject;
 import net.xstopho.resourcelibrary.registration.RegistryProvider;
 
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class BlockRegistry {
 

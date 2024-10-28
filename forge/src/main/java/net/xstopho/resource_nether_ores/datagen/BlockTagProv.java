@@ -11,7 +11,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 import static net.xstopho.resource_nether_ores.registries.BlockRegistry.*;
-import static net.xstopho.resource_nether_ores.registries.BlockRegistry.NETHER_REDSTONE_ORE;
 
 public class BlockTagProv extends BlockTagsProvider {
     public BlockTagProv(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {

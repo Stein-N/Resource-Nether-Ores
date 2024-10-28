@@ -12,7 +12,6 @@ import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.xstopho.resource_nether_ores.OreConstants;
-import net.xstopho.resource_nether_ores.worldgen.OrePlacedFeatures;
 
 public class OreBiomeModifiers {
 
