@@ -1,30 +1,46 @@
 plugins {
     id 'ml-loader'
-    id 'net.neoforged.gradle.userdev' version '7.0.152'
-    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
-}
-
-base {
-    archivesName = "${mod_id}-neoforge-${minecraft_version}"
+    id 'net.neoforged.moddev'
+    id 'me.modmuss50.mod-publish-plugin'
 }
 
 dependencies {
-    implementation "net.neoforged:neoforge:${neoforge_version}"
-
     implementation "net.xstopho.resourcelibrary:resourcelibrary-neoforge:${resource_library}"
 
-    runtimeOnly "maven.modrinth:emi:${emi_version}+${minecraft_version}+neoforge"
+    //runtimeOnly "maven.modrinth:emi:${emi_version}+neoforge"
+    //runtimeOnly "maven.modrinth:jade:${jade_version}+neoforge"
+    //runtimeOnly "maven.modrinth:ae2:${ae2_version}-neoforge"
+    //runtimeOnly "maven.modrinth:mekanism:${mekanism_version}-neoforge"
 }
 
-runs {
-    configureEach {
-        modSource project.sourceSets.main
+neoForge {
+    version = neoforge_version
+
+    parchment {
+        minecraftVersion = parchment_mc_version
+        mappingsVersion = parchment_version
     }
-    client {
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+
+    runs {
+        configureEach {
+            systemProperty('neoforge.enableGameTestNamespaces', mod_id)
+            ideName = "NeoForge ${it.name.capitalize()} (${project.path})"
+            gameDirectory = file("../common/runs/${it.name.toLowerCase()}")
+        }
+        client {
+            client()
+        }
+        server {
+            server()
+            programArguments.add('nogui')
+        }
+        data {
+            data()
+            programArguments = ['--mod', project.mod_id, '--all', '--output', file('src/generated/').getAbsolutePath(), '--existing', file('../common/src/main/resources/').getAbsolutePath()]
+        }
     }
-    data {
-        programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated').getAbsolutePath(), '--existing', project(':common').file('src/main/resources').getAbsolutePath()
+    mods {
+        "${mod_id}" { sourceSet sourceSets.main }
     }
 }
 

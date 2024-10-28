@@ -1,11 +1,6 @@
 plugins {
     id 'ml-loader'
-    id 'fabric-loom' version '1.7-SNAPSHOT'
-    id "me.modmuss50.mod-publish-plugin" version "0.5.1"
-}
-
-base {
-    archivesName = "${mod_id}-fabric-${minecraft_version}"
+    id 'fabric-loom'
 }
 
 dependencies {
@@ -18,14 +13,11 @@ dependencies {
     modImplementation "net.xstopho.resourcelibrary:resourcelibrary-fabric:${resource_library}"
 
     // Runtime Mods
-    modRuntimeOnly "maven.modrinth:emi:${emi_version}+${minecraft_version}+fabric"
+    //modRuntimeOnly "maven.modrinth:emi:${emi_version}+${minecraft_version}+fabric"
     modRuntimeOnly "maven.modrinth:modmenu:${mod_menu_version}"
 }
 
 loom {
-    var aw = project(":common").file("src/main/resources/${mod_id}.accesswidener")
-    if (aw.exists()) accessWidenerPath.set(aw)
-
     runs {
         client {
             client()
@@ -34,8 +26,16 @@ loom {
             programArgs('--username', 'Dev')
             runDir("runs/client")
         }
+
+        server {
+            server()
+            setConfigName("Fabric Server")
+            ideConfigGenerated(true)
+            runDir("runs/server")
+        }
+
         datagen {
-            inherit client
+            inherit server
             name "Fabric Datagen"
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/generated")}"

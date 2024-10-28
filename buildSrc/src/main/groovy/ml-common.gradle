@@ -2,10 +2,12 @@ plugins {
     id 'java-library'
 }
 
+base {
+    archivesName = "$mod_id-$project.name-$minecraft_version"
+}
+
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
-    withSourcesJar()
-    withJavadocJar()
 }
 
 repositories {
@@ -58,7 +60,6 @@ processResources {
             "neoforge_loader_version": neoforge_loader_version,
 
             // Dependencies
-            "resource_config_api": resource_config_api,
             "resource_library": resource_library
     ]
 
