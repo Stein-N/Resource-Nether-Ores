@@ -1,4 +1,4 @@
-version:3953
+version:4082
 ao:false
 biomeBlendRadius:2
 enableVsync:true
@@ -12,11 +12,12 @@ darknessEffectScale:1.0
 glintSpeed:0.5
 glintStrength:0.75
 prioritizeChunkUpdates:0
-fullscreen:true
+fullscreen:false
 gamma:0.5
 graphicsMode:0
 guiScale:2
 maxFps:120
+inactivityFpsLimit:"afk"
 mipmapLevels:0
 narrator:0
 particles:1
@@ -27,6 +28,7 @@ simulationDistance:12
 screenEffectScale:1.0
 soundDevice:""
 autoJump:false
+rotateWithMinecart:false
 operatorItemsTab:false
 autoSuggestions:true
 chatColors:true
@@ -47,9 +49,10 @@ hideSplashTexts:false
 mouseSensitivity:0.2535211267605634
 damageTiltStrength:1.0
 highContrast:false
+highContrastBlockOutline:false
 narratorHotkey:true
 resourcePacks:["vanilla","fabric"]
-incompatibleResourcePacks:["resource_nether_ores","resourcelibrary"]
+incompatibleResourcePacks:["resource_nether_ores"]
 lastServer:
 lang:en_us
 chatVisibility:0
@@ -58,7 +61,7 @@ chatLineSpacing:0.0
 textBackgroundOpacity:0.5
 backgroundForChatOnly:true
 hideServerAddress:false
-advancedItemTooltips:true
+advancedItemTooltips:false
 pauseOnLostFocus:true
 overrideWidth:0
 overrideHeight:0
@@ -78,7 +81,6 @@ glDebugVerbosity:1
 skipMultiplayerWarning:false
 hideMatchedNames:true
 joinedFirstServer:false
-hideBundleTutorial:false
 syncChunkWrites:true
 showAutosaveIndicator:true
 allowServerListing:true
