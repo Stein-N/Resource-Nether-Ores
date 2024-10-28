@@ -35,6 +35,14 @@ public class BlockLootProv extends BlockLootSubProvider {
         this.add(BlockRegistry.NETHER_EMERALD_ORE.get(), createOreDrop(BlockRegistry.NETHER_EMERALD_ORE.get(), Items.EMERALD));
         this.add(BlockRegistry.NETHER_LAPIS_ORE.get(), createLapisOreDrops(BlockRegistry.NETHER_LAPIS_ORE.get()));
         this.add(BlockRegistry.NETHER_REDSTONE_ORE.get(), createRedstoneOreDrops(BlockRegistry.NETHER_REDSTONE_ORE.get()));
+
+        this.add(BlockRegistry.BASALT_COAL_ORE.get(), createOreDrop(BlockRegistry.NETHER_COAL_ORE.get(), Items.COAL));
+        this.add(BlockRegistry.BASALT_COPPER_ORE.get(), createCopperOreDrops(BlockRegistry.NETHER_COPPER_ORE.get()));
+        this.add(BlockRegistry.BASALT_IRON_ORE.get(), createOreDrop(BlockRegistry.NETHER_IRON_ORE.get(), Items.RAW_IRON));
+        this.add(BlockRegistry.BASALT_DIAMOND_ORE.get(), createOreDrop(BlockRegistry.NETHER_DIAMOND_ORE.get(), Items.DIAMOND));
+        this.add(BlockRegistry.BASALT_EMERALD_ORE.get(), createOreDrop(BlockRegistry.NETHER_EMERALD_ORE.get(), Items.EMERALD));
+        this.add(BlockRegistry.BASALT_LAPIS_ORE.get(), createLapisOreDrops(BlockRegistry.NETHER_LAPIS_ORE.get()));
+        this.add(BlockRegistry.BASALT_REDSTONE_ORE.get(), createRedstoneOreDrops(BlockRegistry.NETHER_REDSTONE_ORE.get()));
     }
 
     @Override

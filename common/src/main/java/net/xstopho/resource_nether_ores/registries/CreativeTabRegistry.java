@@ -1,7 +1,6 @@
 package net.xstopho.resource_nether_ores.registries;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -18,13 +17,9 @@ public class CreativeTabRegistry {
                     .icon(() -> new ItemStack(BlockRegistry.NETHER_DIAMOND_ORE.get()))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(BlockRegistry.NETHER_COAL_ORE.get());
-                        output.accept(BlockRegistry.NETHER_COPPER_ORE.get());
-                        output.accept(BlockRegistry.NETHER_IRON_ORE.get());
-                        output.accept(BlockRegistry.NETHER_DIAMOND_ORE.get());
-                        output.accept(BlockRegistry.NETHER_EMERALD_ORE.get());
-                        output.accept(BlockRegistry.NETHER_LAPIS_ORE.get());
-                        output.accept(BlockRegistry.NETHER_REDSTONE_ORE.get());
+                        BlockRegistry.BLOCKS.getEntries().forEach(registryObject -> {
+                            output.accept(registryObject.get());
+                        });
 
                     }).build());
 

@@ -9,13 +9,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 public class OreBiomeModifications {
 
     public static void init() {
-        addFeature(OrePlacedFeatures.NETHER_COAL_ORE_FEATURE);
-        addFeature(OrePlacedFeatures.NETHER_COPPER_ORE_FEATURE);
-        addFeature(OrePlacedFeatures.NETHER_IRON_ORE_FEATURE);
-        addFeature(OrePlacedFeatures.NETHER_DIAMOND_ORE_FEATURE);
-        addFeature(OrePlacedFeatures.NETHER_EMERALD_ORE_FEATURE);
-        addFeature(OrePlacedFeatures.NETHER_LAPIS_ORE_FEATURE);
-        addFeature(OrePlacedFeatures.NETHER_REDSTONE_ORE_FEATURE);
+        OrePlacedFeatures.PLACED_FEATURES.forEach(OreBiomeModifications::addFeature);
     }
 
     static void addFeature(ResourceKey<PlacedFeature> key) {

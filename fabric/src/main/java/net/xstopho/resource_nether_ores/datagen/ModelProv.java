@@ -29,6 +29,14 @@ public class ModelProv extends FabricModelProvider {
         createLayeredNetherOreBlock(block, BlockRegistry.NETHER_EMERALD_ORE, "emerald_ore");
         createLayeredNetherOreBlock(block, BlockRegistry.NETHER_LAPIS_ORE, "lapis_ore");
         createLayeredNetherOreBlock(block, BlockRegistry.NETHER_REDSTONE_ORE, "redstone_ore");
+
+        createLayeredBasaltOreBlock(block, BlockRegistry.BASALT_COAL_ORE, "coal_ore");
+        createLayeredBasaltOreBlock(block, BlockRegistry.BASALT_COPPER_ORE, "copper_ore");
+        createLayeredBasaltOreBlock(block, BlockRegistry.BASALT_IRON_ORE, "iron_ore");
+        createLayeredBasaltOreBlock(block, BlockRegistry.BASALT_DIAMOND_ORE, "diamond_ore");
+        createLayeredBasaltOreBlock(block, BlockRegistry.BASALT_EMERALD_ORE, "emerald_ore");
+        createLayeredBasaltOreBlock(block, BlockRegistry.BASALT_LAPIS_ORE, "lapis_ore");
+        createLayeredBasaltOreBlock(block, BlockRegistry.BASALT_REDSTONE_ORE, "redstone_ore");
     }
 
     @Override
@@ -45,6 +53,19 @@ public class ModelProv extends FabricModelProvider {
 
         ResourceLocation model = new ModelTemplate(parent, Optional.empty(), TextureSlot.ALL, TextureSlot.LAYER0)
                 .create(ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/nether_" + textureKey), map, generator.modelOutput);
+        generator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block.get(), model));
+    }
+
+    private void createLayeredBasaltOreBlock(BlockModelGenerators generator, RegistryObject<Block> block, String textureKey) {
+        TextureMapping map = new TextureMapping();
+        Optional<ResourceLocation> parent = Optional.of(ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/cube_column"));
+
+        map.put(TextureSlot.END, ResourceLocation.withDefaultNamespace("block/basalt_top"));
+        map.put(TextureSlot.SIDE, ResourceLocation.withDefaultNamespace("block/basalt_side"));
+        map.put(TextureSlot.LAYER0, ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/" + textureKey));
+
+        ResourceLocation model = new ModelTemplate(parent, Optional.empty(), TextureSlot.END, TextureSlot.SIDE, TextureSlot.LAYER0)
+                .create(ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/basalt_" + textureKey), map, generator.modelOutput);
         generator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block.get(), model));
     }
 }

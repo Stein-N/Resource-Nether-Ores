@@ -27,19 +27,40 @@ public class OreConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_LAPIS_ORE_KEY = createKey("nether_lapis_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_REDSTONE_ORE_KEY = createKey("nether_redstone_ore");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BASALT_COAL_ORE_KEY = createKey("basalt_coal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BASALT_COPPER_ORE_KEY = createKey("basalt_copper_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BASALT_DIAMOND_ORE_KEY = createKey("basalt_diamond_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BASALT_EMERALD_ORE_KEY = createKey("basalt_emerald_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BASALT_IRON_ORE_KEY = createKey("basalt_iron_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BASALT_LAPIS_ORE_KEY = createKey("basalt_lapis_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BASALT_REDSTONE_ORE_KEY = createKey("basalt_redstone_ore");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
-        register(context, NETHER_COAL_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_COAL_ORE, 17));
-        register(context, NETHER_COPPER_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_COPPER_ORE, 8));
-        register(context, NETHER_DIAMOND_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_DIAMOND_ORE, 8));
-        register(context, NETHER_EMERALD_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_EMERALD_ORE, 7));
-        register(context, NETHER_IRON_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_IRON_ORE, 8));
-        register(context, NETHER_LAPIS_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_LAPIS_ORE, 7));
-        register(context, NETHER_REDSTONE_ORE_KEY, Feature.ORE, getConfig(BlockRegistry.NETHER_REDSTONE_ORE, 8));
+        register(context, NETHER_COAL_ORE_KEY, Feature.ORE, getNetherrackConfig(BlockRegistry.NETHER_COAL_ORE, 17));
+        register(context, NETHER_COPPER_ORE_KEY, Feature.ORE, getNetherrackConfig(BlockRegistry.NETHER_COPPER_ORE, 8));
+        register(context, NETHER_DIAMOND_ORE_KEY, Feature.ORE, getNetherrackConfig(BlockRegistry.NETHER_DIAMOND_ORE, 8));
+        register(context, NETHER_EMERALD_ORE_KEY, Feature.ORE, getNetherrackConfig(BlockRegistry.NETHER_EMERALD_ORE, 7));
+        register(context, NETHER_IRON_ORE_KEY, Feature.ORE, getNetherrackConfig(BlockRegistry.NETHER_IRON_ORE, 8));
+        register(context, NETHER_LAPIS_ORE_KEY, Feature.ORE, getNetherrackConfig(BlockRegistry.NETHER_LAPIS_ORE, 7));
+        register(context, NETHER_REDSTONE_ORE_KEY, Feature.ORE, getNetherrackConfig(BlockRegistry.NETHER_REDSTONE_ORE, 8));
+
+        register(context, BASALT_COAL_ORE_KEY, Feature.ORE, getBasaltConfig(BlockRegistry.BASALT_COAL_ORE, 9));
+        register(context, BASALT_COPPER_ORE_KEY, Feature.ORE, getBasaltConfig(BlockRegistry.BASALT_COPPER_ORE, 4));
+        register(context, BASALT_DIAMOND_ORE_KEY, Feature.ORE, getBasaltConfig(BlockRegistry.BASALT_DIAMOND_ORE, 4));
+        register(context, BASALT_EMERALD_ORE_KEY, Feature.ORE, getBasaltConfig(BlockRegistry.BASALT_EMERALD_ORE, 3));
+        register(context, BASALT_IRON_ORE_KEY, Feature.ORE, getBasaltConfig(BlockRegistry.BASALT_IRON_ORE, 4));
+        register(context, BASALT_LAPIS_ORE_KEY, Feature.ORE, getBasaltConfig(BlockRegistry.BASALT_LAPIS_ORE, 3));
+        register(context, BASALT_REDSTONE_ORE_KEY, Feature.ORE, getBasaltConfig(BlockRegistry.BASALT_REDSTONE_ORE, 4));
     }
 
-    private static OreConfiguration getConfig(RegistryObject<Block> block, int size) {
+    private static OreConfiguration getNetherrackConfig(RegistryObject<Block> block, int oreAmountPerVein) {
         List<OreConfiguration.TargetBlockState> list = List.of(OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), block.get().defaultBlockState()));
-        return new OreConfiguration(list, size);
+        return new OreConfiguration(list, oreAmountPerVein);
+    }
+
+    private static OreConfiguration getBasaltConfig(RegistryObject<Block> block, int oreAmountPerVein) {
+        List<OreConfiguration.TargetBlockState> list = List.of(OreConfiguration.target(new BlockMatchTest(Blocks.BASALT), block.get().defaultBlockState()));
+        return new OreConfiguration(list, oreAmountPerVein);
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String id) {

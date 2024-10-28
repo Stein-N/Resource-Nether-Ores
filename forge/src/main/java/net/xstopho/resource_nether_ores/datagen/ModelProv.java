@@ -17,22 +17,41 @@ public class ModelProv extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        createTrivialCube(BlockRegistry.NETHER_COAL_ORE, "coal_ore");
-        createTrivialCube(BlockRegistry.NETHER_COPPER_ORE, "copper_ore");
-        createTrivialCube(BlockRegistry.NETHER_IRON_ORE, "iron_ore");
-        createTrivialCube(BlockRegistry.NETHER_DIAMOND_ORE, "diamond_ore");
-        createTrivialCube(BlockRegistry.NETHER_EMERALD_ORE, "emerald_ore");
-        createTrivialCube(BlockRegistry.NETHER_LAPIS_ORE, "lapis_ore");
-        createTrivialCube(BlockRegistry.NETHER_REDSTONE_ORE, "redstone_ore");
+        createNetherrackOreBlock(BlockRegistry.NETHER_COAL_ORE, "coal_ore");
+        createNetherrackOreBlock(BlockRegistry.NETHER_COPPER_ORE, "copper_ore");
+        createNetherrackOreBlock(BlockRegistry.NETHER_IRON_ORE, "iron_ore");
+        createNetherrackOreBlock(BlockRegistry.NETHER_DIAMOND_ORE, "diamond_ore");
+        createNetherrackOreBlock(BlockRegistry.NETHER_EMERALD_ORE, "emerald_ore");
+        createNetherrackOreBlock(BlockRegistry.NETHER_LAPIS_ORE, "lapis_ore");
+        createNetherrackOreBlock(BlockRegistry.NETHER_REDSTONE_ORE, "redstone_ore");
+
+        createBasaltkOreBlock(BlockRegistry.BASALT_COAL_ORE, "coal_ore");
+        createBasaltkOreBlock(BlockRegistry.BASALT_COPPER_ORE, "copper_ore");
+        createBasaltkOreBlock(BlockRegistry.BASALT_IRON_ORE, "iron_ore");
+        createBasaltkOreBlock(BlockRegistry.BASALT_DIAMOND_ORE, "diamond_ore");
+        createBasaltkOreBlock(BlockRegistry.BASALT_EMERALD_ORE, "emerald_ore");
+        createBasaltkOreBlock(BlockRegistry.BASALT_LAPIS_ORE, "lapis_ore");
+        createBasaltkOreBlock(BlockRegistry.BASALT_REDSTONE_ORE, "redstone_ore");
     }
 
-    void createTrivialCube(RegistryObject<Block> block, String textureKey) {
+    void createNetherrackOreBlock(RegistryObject<Block> block, String textureKey) {
         simpleBlockWithItem(block.get(), createLayeredNetherOreBlock(textureKey).model);
+    }
+
+    void createBasaltkOreBlock(RegistryObject<Block> block, String textureKey) {
+        simpleBlockWithItem(block.get(), createLayeredBasaltOreBlock(textureKey).model);
     }
 
     private ConfiguredModel createLayeredNetherOreBlock(String textureKey) {
         return new ConfiguredModel(models().withExistingParent("nether_" + textureKey, location("block/simple_cube"))
                 .texture("all", ResourceLocation.withDefaultNamespace("block/netherrack"))
+                .texture("layer0", location("block/" + textureKey)));
+    }
+
+    private ConfiguredModel createLayeredBasaltOreBlock(String textureKey) {
+        return new ConfiguredModel(models().withExistingParent("basalt_" + textureKey, location("block/cube_column"))
+                .texture("end", ResourceLocation.withDefaultNamespace("block/basalt_top"))
+                .texture("side", ResourceLocation.withDefaultNamespace("block/basalt_side"))
                 .texture("layer0", location("block/" + textureKey)));
     }
 

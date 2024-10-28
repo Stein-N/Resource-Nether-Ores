@@ -23,20 +23,25 @@ public class BlockTagProv extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(NETHER_COAL_ORE.get(), NETHER_COPPER_ORE.get(), NETHER_IRON_ORE.get(),
                         NETHER_DIAMOND_ORE.get(), NETHER_EMERALD_ORE.get(), NETHER_LAPIS_ORE.get(),
-                        NETHER_REDSTONE_ORE.get());
+                        NETHER_REDSTONE_ORE.get(),
+                        BASALT_COAL_ORE.get(), BASALT_COPPER_ORE.get(), BASALT_IRON_ORE.get(),
+                        BASALT_DIAMOND_ORE.get(), BASALT_EMERALD_ORE.get(), BASALT_LAPIS_ORE.get(),
+                        BASALT_REDSTONE_ORE.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(NETHER_COAL_ORE.get(), NETHER_IRON_ORE.get(), NETHER_LAPIS_ORE.get());
+                .add(NETHER_COAL_ORE.get(), NETHER_IRON_ORE.get(), NETHER_LAPIS_ORE.get(),
+                        BASALT_COAL_ORE.get(), BASALT_COPPER_ORE.get(), BASALT_LAPIS_ORE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(NETHER_REDSTONE_ORE.get(), NETHER_EMERALD_ORE.get(), NETHER_DIAMOND_ORE.get());
+                .add(NETHER_REDSTONE_ORE.get(), NETHER_EMERALD_ORE.get(), NETHER_DIAMOND_ORE.get(),
+                        BASALT_REDSTONE_ORE.get(), BASALT_EMERALD_ORE.get(), BASALT_DIAMOND_ORE.get());
 
-        this.tag(BlockTags.COAL_ORES).add(NETHER_COAL_ORE.get());
-        this.tag(BlockTags.COPPER_ORES).add(NETHER_COPPER_ORE.get());
-        this.tag(BlockTags.IRON_ORES).add(NETHER_IRON_ORE.get());
-        this.tag(BlockTags.DIAMOND_ORES).add(NETHER_DIAMOND_ORE.get());
-        this.tag(BlockTags.EMERALD_ORES).add(NETHER_EMERALD_ORE.get());
-        this.tag(BlockTags.LAPIS_ORES).add(NETHER_LAPIS_ORE.get());
-        this.tag(BlockTags.REDSTONE_ORES).add(NETHER_REDSTONE_ORE.get());
+        this.tag(BlockTags.COAL_ORES).add(NETHER_COAL_ORE.get(), BASALT_COAL_ORE.get());
+        this.tag(BlockTags.COPPER_ORES).add(NETHER_COPPER_ORE.get(), BASALT_COPPER_ORE.get());
+        this.tag(BlockTags.IRON_ORES).add(NETHER_IRON_ORE.get(), BASALT_IRON_ORE.get());
+        this.tag(BlockTags.DIAMOND_ORES).add(NETHER_DIAMOND_ORE.get(), BASALT_DIAMOND_ORE.get());
+        this.tag(BlockTags.EMERALD_ORES).add(NETHER_EMERALD_ORE.get(), BASALT_EMERALD_ORE.get());
+        this.tag(BlockTags.LAPIS_ORES).add(NETHER_LAPIS_ORE.get(), BASALT_LAPIS_ORE.get());
+        this.tag(BlockTags.REDSTONE_ORES).add(NETHER_REDSTONE_ORE.get(), BASALT_REDSTONE_ORE.get());
     }
 }

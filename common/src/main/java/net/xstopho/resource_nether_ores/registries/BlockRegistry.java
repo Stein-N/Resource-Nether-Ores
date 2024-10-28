@@ -53,7 +53,34 @@ public class BlockRegistry {
     public static final RegistryObject<Block> NETHER_REDSTONE_ORE = register("nether_redstone_ore",
             RedStoneOreBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_ORE));
 
+    /**<---------------------------------- Basalt Ores -------------------------------------->**/
 
+    public static final RegistryObject<Block> BASALT_COAL_ORE = register("basalt_coal_ore",
+            properties -> new DropExperienceBlock(ConstantInt.of(0), properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_COAL_ORE));
+
+    public static final RegistryObject<Block> BASALT_COPPER_ORE = register("basalt_copper_ore",
+            properties -> new DropExperienceBlock(ConstantInt.of(0), properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_COPPER_ORE));
+
+    public static final RegistryObject<Block> BASALT_IRON_ORE = register("basalt_iron_ore",
+            properties -> new DropExperienceBlock(ConstantInt.of(0), properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE));
+
+    public static final RegistryObject<Block> BASALT_DIAMOND_ORE = register("basalt_diamond_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(1, 7), properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_DIAMOND_ORE));
+
+    public static final RegistryObject<Block> BASALT_EMERALD_ORE = register("basalt_emerald_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(1, 7), properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_EMERALD_ORE));
+
+    public static final RegistryObject<Block> BASALT_LAPIS_ORE = register("basalt_lapis_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(1, 5), properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_LAPIS_ORE));
+
+    public static final RegistryObject<Block> BASALT_REDSTONE_ORE = register("basalt_redstone_ore",
+            RedStoneOreBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_REDSTONE_ORE));
 
 
     private static RegistryObject<Block> register(String id, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockBehavior) {

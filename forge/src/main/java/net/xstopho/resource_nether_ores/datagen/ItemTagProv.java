@@ -25,14 +25,17 @@ public class ItemTagProv extends ItemTagsProvider {
         this.tag(OreTags.ORES)
                 .add(NETHER_COAL_ORE.get().asItem(), NETHER_COPPER_ORE.get().asItem(), NETHER_IRON_ORE.get().asItem(),
                         NETHER_DIAMOND_ORE.get().asItem(), NETHER_EMERALD_ORE.get().asItem(), NETHER_LAPIS_ORE.get().asItem(),
-                        NETHER_REDSTONE_ORE.get().asItem());
+                        NETHER_REDSTONE_ORE.get().asItem(),
+                        BASALT_COAL_ORE.get().asItem(), BASALT_COPPER_ORE.get().asItem(), BASALT_IRON_ORE.get().asItem(),
+                        BASALT_DIAMOND_ORE.get().asItem(), BASALT_EMERALD_ORE.get().asItem(), BASALT_LAPIS_ORE.get().asItem(),
+                        BASALT_REDSTONE_ORE.get().asItem());
 
-        this.tag(OreTags.COAL_ORE).add(NETHER_COAL_ORE.get().asItem());
-        this.tag(OreTags.COPPER_ORE).add(NETHER_COPPER_ORE.get().asItem());
-        this.tag(OreTags.IRON_ORE).add(NETHER_IRON_ORE.get().asItem());
-        this.tag(OreTags.DIAMOND_ORE).add(NETHER_DIAMOND_ORE.get().asItem());
-        this.tag(OreTags.EMERALD_ORE).add(NETHER_EMERALD_ORE.get().asItem());
-        this.tag(OreTags.LAPIS_ORE).add(NETHER_LAPIS_ORE.get().asItem());
-        this.tag(OreTags.REDSTONE_ORE).add(NETHER_REDSTONE_ORE.get().asItem());
+        this.tag(OreTags.COAL_ORE).add(NETHER_COAL_ORE.get().asItem(), BASALT_COAL_ORE.get().asItem());
+        this.tag(OreTags.COPPER_ORE).add(NETHER_COPPER_ORE.get().asItem(), BASALT_COPPER_ORE.get().asItem());
+        this.tag(OreTags.IRON_ORE).add(NETHER_IRON_ORE.get().asItem(), BASALT_IRON_ORE.get().asItem());
+        this.tag(OreTags.DIAMOND_ORE).add(NETHER_DIAMOND_ORE.get().asItem(), BASALT_DIAMOND_ORE.get().asItem());
+        this.tag(OreTags.EMERALD_ORE).add(NETHER_EMERALD_ORE.get().asItem(), BASALT_EMERALD_ORE.get().asItem());
+        this.tag(OreTags.LAPIS_ORE).add(NETHER_LAPIS_ORE.get().asItem(), BASALT_LAPIS_ORE.get().asItem());
+        this.tag(OreTags.REDSTONE_ORE).add(NETHER_REDSTONE_ORE.get().asItem(), BASALT_REDSTONE_ORE.get().asItem());
     }
 }

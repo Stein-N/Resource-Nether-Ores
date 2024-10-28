@@ -26,6 +26,14 @@ public class OreBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NETHER_LAPIS_ORE = createKey("add_nether_lapis_ore");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_REDSTONE_ORE = createKey("add_nether_redstone_ore");
 
+    public static final ResourceKey<BiomeModifier> ADD_BASALT_COAL_ORE = createKey("add_basalt_coal_ore");
+    public static final ResourceKey<BiomeModifier> ADD_BASALT_COPPER_ORE = createKey("add_basalt_copper_ore");
+    public static final ResourceKey<BiomeModifier> ADD_BASALT_DIAMOND_ORE = createKey("add_basalt_diamond_ore");
+    public static final ResourceKey<BiomeModifier> ADD_BASALT_EMERALD_ORE = createKey("add_basalt_emerald_ore");
+    public static final ResourceKey<BiomeModifier> ADD_BASALT_IRON_ORE = createKey("add_basalt_iron_ore");
+    public static final ResourceKey<BiomeModifier> ADD_BASALT_LAPIS_ORE = createKey("add_basalt_lapis_ore");
+    public static final ResourceKey<BiomeModifier> ADD_BASALT_REDSTONE_ORE = createKey("add_basalt_redstone_ore");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         contextModifier = context;
 
@@ -36,6 +44,14 @@ public class OreBiomeModifiers {
         addModifier(ADD_NETHER_IRON_ORE, OrePlacedFeatures.NETHER_IRON_ORE_FEATURE);
         addModifier(ADD_NETHER_LAPIS_ORE, OrePlacedFeatures.NETHER_LAPIS_ORE_FEATURE);
         addModifier(ADD_NETHER_REDSTONE_ORE, OrePlacedFeatures.NETHER_REDSTONE_ORE_FEATURE);
+
+        addModifier(ADD_BASALT_COAL_ORE, OrePlacedFeatures.BASALT_COAL_ORE_FEATURE);
+        addModifier(ADD_BASALT_COPPER_ORE, OrePlacedFeatures.BASALT_COPPER_ORE_FEATURE);
+        addModifier(ADD_BASALT_DIAMOND_ORE, OrePlacedFeatures.BASALT_DIAMOND_ORE_FEATURE);
+        addModifier(ADD_BASALT_EMERALD_ORE, OrePlacedFeatures.BASALT_EMERALD_ORE_FEATURE);
+        addModifier(ADD_BASALT_IRON_ORE, OrePlacedFeatures.BASALT_IRON_ORE_FEATURE);
+        addModifier(ADD_BASALT_LAPIS_ORE, OrePlacedFeatures.BASALT_LAPIS_ORE_FEATURE);
+        addModifier(ADD_BASALT_REDSTONE_ORE, OrePlacedFeatures.BASALT_REDSTONE_ORE_FEATURE);
     }
 
     private static void addModifier(ResourceKey<BiomeModifier> modifier, ResourceKey<PlacedFeature> feature) {
