@@ -1,4 +1,2 @@
-#### v2.3.0
-- update to 1.21.3
-- adding Basalt Ores
-- tuning down the veins per chunk for every Nether Ore
+#### v2.3.1
+- update ResourceLibrary to 2.3.2

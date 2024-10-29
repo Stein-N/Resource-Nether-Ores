@@ -1,3 +1,6 @@
+#### v2.3.1
+- update ResourceLibrary to 2.3.2
+
 #### v2.3.0
 - update to 1.21.3
 - adding Basalt Ores

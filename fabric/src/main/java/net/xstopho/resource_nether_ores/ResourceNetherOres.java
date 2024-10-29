@@ -8,8 +8,7 @@ import net.xstopho.resource_nether_ores.worldgen.OreBiomeModifications;
 public class ResourceNetherOres implements ModInitializer {
     @Override
     public void onInitialize() {
-        BlockRegistry.init();
-        CreativeTabRegistry.init();
+        OreConstants.commonInit();
 
         OreBiomeModifications.init();
     }
