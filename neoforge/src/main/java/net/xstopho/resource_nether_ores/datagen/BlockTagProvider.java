@@ -12,8 +12,8 @@ import java.util.concurrent.CompletableFuture;
 
 import static net.xstopho.resource_nether_ores.registries.BlockRegistry.*;
 
-public class BlockTagProv extends BlockTagsProvider {
-    public BlockTagProv(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+public class BlockTagProvider extends BlockTagsProvider {
+    public BlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, OreConstants.MOD_ID, existingFileHelper);
     }
 

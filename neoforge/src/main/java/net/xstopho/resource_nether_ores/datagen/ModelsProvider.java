@@ -10,8 +10,8 @@ import net.xstopho.resource_nether_ores.OreConstants;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 import net.xstopho.resourcelibrary.registration.RegistryObject;
 
-public class ModelProv extends BlockStateProvider {
-    public ModelProv(PackOutput output, ExistingFileHelper exFileHelper) {
+public class ModelsProvider extends BlockStateProvider {
+    public ModelsProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, OreConstants.MOD_ID, exFileHelper);
     }
 

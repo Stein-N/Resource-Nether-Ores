@@ -15,14 +15,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class BlockLootProv extends BlockLootSubProvider {
+public class BlockLootProvider extends BlockLootSubProvider {
 
     public static LootTableProvider create(PackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
         return new LootTableProvider(output, Set.of(), List.of(
-                new LootTableProvider.SubProviderEntry(BlockLootProv::new, LootContextParamSets.BLOCK)), provider);
+                new LootTableProvider.SubProviderEntry(BlockLootProvider::new, LootContextParamSets.BLOCK)), provider);
     }
 
-    protected BlockLootProv(HolderLookup.Provider provider) {
+    protected BlockLootProvider(HolderLookup.Provider provider) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
     }
 
