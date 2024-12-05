@@ -30,7 +30,7 @@ neoForge {
             programArguments.add('nogui')
         }
         data {
-            data()
+            clientData()
             programArguments = ['--mod', project.mod_id, '--all', '--output', file('src/generated/').getAbsolutePath(), '--existing', file('../common/src/main/resources/').getAbsolutePath()]
         }
     }
