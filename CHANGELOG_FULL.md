@@ -1,3 +1,6 @@
+#### v2.3.2
+- adding german translation
+
 #### v2.3.1
 - update ResourceLibrary to 2.3.2
 
