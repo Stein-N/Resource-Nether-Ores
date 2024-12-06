@@ -20,7 +20,6 @@ public class ResourceOresDatagen {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         ExistingFileHelper helper = event.getExistingFileHelper();
 
-
         event.createProvider(BlockLootProvider::create);
         event.createProvider(DataPackProvider::new);
         event.createProvider(ModelsProvider::new);
