@@ -1,0 +1,7 @@
+{
+  "values": [
+    "resource_nether_ores:nether_coal_ore",
+    "resource_nether_ores:nether_iron_ore",
+    "resource_nether_ores:nether_lapis_ore"
+  ]
+}
