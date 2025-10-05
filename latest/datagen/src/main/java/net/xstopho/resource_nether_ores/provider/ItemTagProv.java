@@ -1,0 +1,36 @@
+package net.xstopho.resource_nether_ores.provider;
+
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.data.ItemTagsProvider;
+import net.xstopho.resource_nether_ores.OreConstants;
+import net.xstopho.resource_nether_ores.tags.OreTags;
+
+import java.util.concurrent.CompletableFuture;
+
+import static net.xstopho.resource_nether_ores.registries.BlockRegistry.*;
+
+public class ItemTagProv extends ItemTagsProvider {
+
+
+    public ItemTagProv(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> unused) {
+        super(output, lookupProvider, OreConstants.MOD_ID);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider provider) {
+        this.tag(OreTags.ORES)
+                .add(NETHER_COAL_ORE.get().asItem(), NETHER_COPPER_ORE.get().asItem(), NETHER_IRON_ORE.get().asItem(),
+                        NETHER_DIAMOND_ORE.get().asItem(), NETHER_EMERALD_ORE.get().asItem(), NETHER_LAPIS_ORE.get().asItem(),
+                        NETHER_REDSTONE_ORE.get().asItem());
+
+        this.tag(OreTags.COAL_ORE).add(NETHER_COAL_ORE.get().asItem());
+        this.tag(OreTags.COPPER_ORE).add(NETHER_COPPER_ORE.get().asItem());
+        this.tag(OreTags.IRON_ORE).add(NETHER_IRON_ORE.get().asItem());
+        this.tag(OreTags.DIAMOND_ORE).add(NETHER_DIAMOND_ORE.get().asItem());
+        this.tag(OreTags.EMERALD_ORE).add(NETHER_EMERALD_ORE.get().asItem());
+        this.tag(OreTags.LAPIS_ORE).add(NETHER_LAPIS_ORE.get().asItem());
+        this.tag(OreTags.REDSTONE_ORE).add(NETHER_REDSTONE_ORE.get().asItem());
+    }
+}

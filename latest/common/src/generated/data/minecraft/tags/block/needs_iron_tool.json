@@ -1,0 +1,7 @@
+{
+  "values": [
+    "resource_nether_ores:nether_redstone_ore",
+    "resource_nether_ores:nether_emerald_ore",
+    "resource_nether_ores:nether_diamond_ore"
+  ]
+}

@@ -7,18 +7,14 @@ plugins {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge}"
     implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
-}
 
-mixin {
-    config("${mod_id}.mixins.json")
+    implementation("net.xstopho.resourcelibrary:resourcelibrary-forge:${minecraft_version}-${resource_library}")
 }
-
 
 jar {
     manifest {
         attributes([
-                'FMLCorePluginContainsFMLMod': 'true',
-                'MixinConfigs': "${mod_id}.mixins.json"
+                'FMLCorePluginContainsFMLMod': 'true'
         ])
     }
 }
@@ -32,6 +28,19 @@ minecraft {
 
     def at = file('../common/src/main/resources/META-INF/accesstransformer.cfg')
     if (at.exists()) accessTransformers = [at]
+
+    runs {
+        client {
+            workingDirectory file("../fabric/runs/client")
+            ideaModule "${rootProject.name}.${directory}.${project.name}.main"
+            taskName "Client"
+            mods {
+                modClientRun {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
 }
 
 sourceSets.each {

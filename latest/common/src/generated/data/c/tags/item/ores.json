@@ -1,0 +1,11 @@
+{
+  "values": [
+    "resource_nether_ores:nether_coal_ore",
+    "resource_nether_ores:nether_copper_ore_ore",
+    "resource_nether_ores:nether_iron_ore",
+    "resource_nether_ores:nether_diamond_ore",
+    "resource_nether_ores:nether_emerald_ore",
+    "resource_nether_ores:nether_lapis_ore",
+    "resource_nether_ores:nether_redstone_ore"
+  ]
+}

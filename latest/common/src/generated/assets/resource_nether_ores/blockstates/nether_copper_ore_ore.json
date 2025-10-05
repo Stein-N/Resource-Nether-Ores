@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "resource_nether_ores:block/nether_copper_ore_ore"
+    }
+  }
+}

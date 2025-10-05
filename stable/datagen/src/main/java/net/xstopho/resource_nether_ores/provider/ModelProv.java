@@ -1,6 +1,5 @@
 package net.xstopho.resource_nether_ores.provider;
 
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;

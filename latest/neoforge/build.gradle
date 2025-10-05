@@ -3,6 +3,10 @@ plugins {
     id 'net.neoforged.moddev'
 }
 
+dependencies {
+    implementation "net.xstopho.resourcelibrary:resourcelibrary-neoforge:${minecraft_version}-${resource_library}"
+}
+
 neoForge {
     version = neoforge
 
@@ -14,6 +18,9 @@ neoForge {
             systemProperty('neoforge.enableGameTestNamespaces', mod_id)
             ideName = "NeoForge ${it.name.capitalize()} (${project.path})"
             gameDirectory = file("../fabric/runs/${it.name.toLowerCase()}")
+        }
+        client {
+            client()
         }
     }
     mods {

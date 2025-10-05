@@ -1,0 +1,11 @@
+{
+  "item_group.resource_nether_ores": "Resource Ores",
+
+  "block.resource_nether_ores.nether_coal_ore": "Nether Coal Ore",
+  "block.resource_nether_ores.nether_copper_ore": "Nether Copper Ore",
+  "block.resource_nether_ores.nether_iron_ore": "Nether Iron Ore",
+  "block.resource_nether_ores.nether_diamond_ore": "Nether Diamond Ore",
+  "block.resource_nether_ores.nether_emerald_ore": "Nether Emerald Ore",
+  "block.resource_nether_ores.nether_lapis_ore": "Nether Lapis Lazuli Ore",
+  "block.resource_nether_ores.nether_redstone_ore": "Nether Redstone Ore"
+}
