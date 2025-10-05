@@ -1,5 +1,6 @@
 package net.xstopho.resource_nether_ores.provider;
 
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -33,7 +34,7 @@ public class ModelProv extends BlockStateProvider {
     private ConfiguredModel createLayeredNetherOreBlock(String textureKey) {
         return new ConfiguredModel(models().withExistingParent("nether_" + textureKey, location("block/simple_cube"))
                 .texture("all", ResourceLocation.withDefaultNamespace("block/netherrack"))
-                .texture("layer0", location("block/" + textureKey)));
+                .texture("layer0", location("block/" + textureKey)).renderType("cutout"));
     }
 
     private ResourceLocation location(String path) {
