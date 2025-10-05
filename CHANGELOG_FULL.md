@@ -1,3 +1,7 @@
+#### v2.4.0
+- update to 1.21.9
+- some internal changes
+
 #### v2.3.4
 - update to 1.21.4
 - fixing texture issue on forge and neoforge

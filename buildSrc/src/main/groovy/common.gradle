@@ -66,7 +66,6 @@ processResources {
             "neoforge": neoforge,
 
             // Dependencies
-            "resource_config_api": resource_config_api,
             "resource_library": resource_library
     ]
 
