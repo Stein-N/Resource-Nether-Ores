@@ -20,5 +20,5 @@ tasks.named('javadoc', Javadoc) {
 
 processResources {
     from project(":${directory}:common").sourceSets.main.resources
-    from file('src/generated')
+    from file('../common/src/generated')
 }

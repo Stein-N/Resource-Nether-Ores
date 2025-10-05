@@ -1,4 +1,4 @@
-package net.xstopho.resource_nether_ores.datagen;
+package net.xstopho.resource_nether_ores.provider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
