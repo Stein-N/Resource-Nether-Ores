@@ -1,9 +1,0 @@
-// 1.21.1	2025-07-22T16:39:16.9313663	Tags for minecraft:item mod id resource_nether_ores
-aad1ce61c9f11b4a498a906c7a895f09f99f2bd1 data/forge/tags/item/ores.json
-6d1e7d6520c73377fb46ef25e320b70ed1e4721f data/forge/tags/item/ore/coal.json
-cf5ca14484554d10523d3f169531892dcd4b8cba data/forge/tags/item/ore/copper.json
-582290fd3ebb2841902b884ea0e949243f18fb02 data/forge/tags/item/ore/diamond.json
-f5cf79720ab2c12b1556c323b168478b627b5485 data/forge/tags/item/ore/emerald.json
-916bb53c4212101c34745cb5222d38f910b4c796 data/forge/tags/item/ore/iron.json
-1e2055d254b485813bf2e652b9a11ada489ed0c4 data/forge/tags/item/ore/lapis.json
-2f3431d379b6ad8a7f44e872959ddfc3e96ac13f data/forge/tags/item/ore/redstone.json

@@ -9,7 +9,13 @@ public class ResourceNetherOresClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), BlockRegistry.NETHER_COAL_ORE.get(), BlockRegistry.NETHER_COPPER_ORE.get(), BlockRegistry.NETHER_IRON_ORE.get(),
-                BlockRegistry.NETHER_DIAMOND_ORE.get(), BlockRegistry.NETHER_EMERALD_ORE.get(), BlockRegistry.NETHER_LAPIS_ORE.get(), BlockRegistry.NETHER_REDSTONE_ORE.get());
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
+                BlockRegistry.NETHER_COAL_ORE.get(),
+                BlockRegistry.NETHER_COPPER_ORE.get(),
+                BlockRegistry.NETHER_IRON_ORE.get(),
+                BlockRegistry.NETHER_DIAMOND_ORE.get(),
+                BlockRegistry.NETHER_EMERALD_ORE.get(),
+                BlockRegistry.NETHER_LAPIS_ORE.get(),
+                BlockRegistry.NETHER_REDSTONE_ORE.get());
     }
 }

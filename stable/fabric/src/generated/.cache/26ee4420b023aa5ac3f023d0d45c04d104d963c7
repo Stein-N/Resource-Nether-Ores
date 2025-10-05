@@ -1,8 +1,0 @@
-// 1.21.1	2025-07-22T16:35:51.8310492	Resource Nether Ores/Block Loot Tables
-a9c56907119dd3d3a047c8767035cc5c56f87633 data\resource_nether_ores\loot_table\blocks\nether_iron_ore.json
-ca0455ac7410c20da8f588605db5a6c8562ffada data\resource_nether_ores\loot_table\blocks\nether_diamond_ore.json
-335d47d539f3c80e31e82c52e5c14982d5460498 data\resource_nether_ores\loot_table\blocks\nether_emerald_ore.json
-e1c95a389a4c4c7afa58c5a1e0a533b4212ff719 data\resource_nether_ores\loot_table\blocks\nether_redstone_ore.json
-8e14863804211bbd5f9904fe2ebef311e9dbc130 data\resource_nether_ores\loot_table\blocks\nether_coal_ore.json
-10f30f82481b1ff166582e6a9806679818b31b9a data\resource_nether_ores\loot_table\blocks\nether_lapis_ore.json
-cc1d88f1d672b787c4fe862bfb39fe37e6946dcf data\resource_nether_ores\loot_table\blocks\nether_copper_ore.json
