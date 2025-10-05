@@ -41,20 +41,6 @@ minecraft {
                 }
             }
         }
-        data {
-            workingDirectory file('../fabric/runs/client')
-            ideaModule "${rootProject.name}.${directory}.${project.name}.main"
-            args '--mod', mod_id, '--all', '--output', file('src/generated'), '--existing', file('../common/src/main/resources/').getAbsolutePath()
-            taskName 'Data'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            mods {
-                modDataRun {
-                    source sourceSets.main
-                    source project(":stable:common").sourceSets.main
-                }
-            }
-        }
     }
 }
 

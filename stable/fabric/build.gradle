@@ -32,15 +32,6 @@ loom {
             programArgs('--username', 'Dev')
             runDir("runs/client")
         }
-        datagen {
-            inherit client
-            name "Fabric Datagen"
-            vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${file("src/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
-
-            runDir "build/datagen"
-        }
     }
 }
 
