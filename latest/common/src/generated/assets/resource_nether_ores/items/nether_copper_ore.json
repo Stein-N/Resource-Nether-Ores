@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "resource_nether_ores:block/nether_copper_ore"
+  }
+}

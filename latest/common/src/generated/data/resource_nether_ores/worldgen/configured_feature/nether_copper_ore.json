@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "resource_nether_ores:nether_copper_ore_ore"
+          "Name": "resource_nether_ores:nether_copper_ore"
         },
         "target": {
           "block": "minecraft:netherrack",

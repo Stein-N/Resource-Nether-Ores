@@ -3,7 +3,7 @@ package net.xstopho.resource_nether_ores.worldgen;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -43,7 +43,7 @@ public class OreConfiguredFeatures {
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String id) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, id));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(OreConstants.MOD_ID, id));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>>

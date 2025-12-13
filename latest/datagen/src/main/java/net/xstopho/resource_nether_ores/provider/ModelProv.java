@@ -8,7 +8,7 @@ import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.xstopho.resource_nether_ores.OreConstants;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
@@ -35,15 +35,15 @@ public class ModelProv extends ModelProvider {
 
     private void createOreModel(RegistryObject<Block> block, String texture, BlockModelGenerators blockModels) {
         TextureMapping textureMap = new TextureMapping();
-        textureMap.put(TextureSlot.ALL, ResourceLocation.withDefaultNamespace("block/netherrack"));
-        textureMap.put(TextureSlot.LAYER0, ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/" + texture));
+        textureMap.put(TextureSlot.ALL, Identifier.withDefaultNamespace("block/netherrack"));
+        textureMap.put(TextureSlot.LAYER0, Identifier.fromNamespaceAndPath(OreConstants.MOD_ID, "block/" + texture));
 
         ModelTemplate template = new ModelTemplate(
-                Optional.of(ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, "block/simple_cube")),
+                Optional.of(Identifier.fromNamespaceAndPath(OreConstants.MOD_ID, "block/simple_cube")),
                 Optional.empty(), TextureSlot.ALL, TextureSlot.LAYER0)
                 .extend().renderType("cutout").build();
 
-        ResourceLocation location = template.create(block.get(), textureMap, blockModels.modelOutput);
+        Identifier location = template.create(block.get(), textureMap, blockModels.modelOutput);
 
         blockModels.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block.get(), BlockModelGenerators.plainVariant(location)));
 

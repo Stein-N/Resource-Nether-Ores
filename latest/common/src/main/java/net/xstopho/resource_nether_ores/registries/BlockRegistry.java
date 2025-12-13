@@ -3,7 +3,7 @@ package net.xstopho.resource_nether_ores.registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -26,7 +26,7 @@ public class BlockRegistry {
     private static final RegistryProvider<Item> ITEMS = RegistryProvider.get(OreConstants.MOD_ID, BuiltInRegistries.ITEM);
 
     public static final RegistryObject<Block> NETHER_COAL_ORE = register("nether_coal_ore", properties -> new DropExperienceBlock(UniformInt.of(1, 3), properties), BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_ORE));
-    public static final RegistryObject<Block> NETHER_COPPER_ORE = register("nether_copper_ore_ore", properties -> new DropExperienceBlock(ConstantInt.of(0), properties), BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_ORE));
+    public static final RegistryObject<Block> NETHER_COPPER_ORE = register("nether_copper_ore", properties -> new DropExperienceBlock(ConstantInt.of(0), properties), BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_ORE));
     public static final RegistryObject<Block> NETHER_IRON_ORE = register("nether_iron_ore", properties -> new DropExperienceBlock(ConstantInt.of(0), properties), BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE));
     public static final RegistryObject<Block> NETHER_DIAMOND_ORE = register("nether_diamond_ore", properties -> new DropExperienceBlock(UniformInt.of(1, 7), properties), BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_ORE));
     public static final RegistryObject<Block> NETHER_EMERALD_ORE = register("nether_emerald_ore", properties -> new DropExperienceBlock(UniformInt.of(1, 7), properties), BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_ORE));
@@ -51,11 +51,11 @@ public class BlockRegistry {
     }
 
     private static ResourceKey<Block> blockKey(String id) {
-        return ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(BLOCKS.getModId(), id));
+        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(BLOCKS.getModId(), id));
     }
 
     private static ResourceKey<Item> itemKey(String id) {
-        return ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ITEMS.getModId(), id));
+        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ITEMS.getModId(), id));
     }
 
     public static void init() {}
