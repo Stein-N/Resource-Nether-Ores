@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_nether",
-  "features": "resource_nether_ores:nether_copper_ore_feature",
-  "step": "underground_ores"
-}

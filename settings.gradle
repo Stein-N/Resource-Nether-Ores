@@ -13,7 +13,7 @@ plugins {
 }
 
 rootProject.name = 'Resource-Nether-Ores'
-include('latest');
+//include('latest');
 include('stable');
 
 rootProject.children.each { subproject ->

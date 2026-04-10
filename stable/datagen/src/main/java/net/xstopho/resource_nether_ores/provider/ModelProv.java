@@ -1,42 +1,52 @@
 package net.xstopho.resource_nether_ores.provider;
 
+
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.model.ModelTemplate;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TextureSlot;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.xstopho.resource_nether_ores.OreConstants;
 import net.xstopho.resource_nether_ores.registries.BlockRegistry;
 import net.xstopho.resourcelibrary.registration.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
-public class ModelProv extends BlockStateProvider {
-    public ModelProv(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, OreConstants.MOD_ID, exFileHelper);
+import java.util.Optional;
+
+public class ModelProv extends ModelProvider {
+    public ModelProv(PackOutput packOutput) {
+        super(packOutput, OreConstants.MOD_ID);
     }
 
     @Override
-    protected void registerStatesAndModels() {
-        createTrivialCube(BlockRegistry.NETHER_COAL_ORE, "coal_ore");
-        createTrivialCube(BlockRegistry.NETHER_COPPER_ORE, "copper_ore");
-        createTrivialCube(BlockRegistry.NETHER_IRON_ORE, "iron_ore");
-        createTrivialCube(BlockRegistry.NETHER_DIAMOND_ORE, "diamond_ore");
-        createTrivialCube(BlockRegistry.NETHER_EMERALD_ORE, "emerald_ore");
-        createTrivialCube(BlockRegistry.NETHER_LAPIS_ORE, "lapis_ore");
-        createTrivialCube(BlockRegistry.NETHER_REDSTONE_ORE, "redstone_ore");
+    protected void registerModels(@NotNull BlockModelGenerators blockModels, @NotNull ItemModelGenerators itemModels) {
+        createOreModel(BlockRegistry.NETHER_COAL_ORE, "coal_ore", blockModels);
+        createOreModel(BlockRegistry.NETHER_COPPER_ORE, "copper_ore", blockModels);
+        createOreModel(BlockRegistry.NETHER_IRON_ORE, "iron_ore", blockModels);
+        createOreModel(BlockRegistry.NETHER_DIAMOND_ORE, "diamond_ore", blockModels);
+        createOreModel(BlockRegistry.NETHER_EMERALD_ORE, "emerald_ore", blockModels);
+        createOreModel(BlockRegistry.NETHER_REDSTONE_ORE, "redstone_ore", blockModels);
+        createOreModel(BlockRegistry.NETHER_LAPIS_ORE, "lapis_ore", blockModels);
     }
 
-    void createTrivialCube(RegistryObject<Block> block, String textureKey) {
-        simpleBlockWithItem(block.get(), createLayeredNetherOreBlock(textureKey).model);
-    }
+    private void createOreModel(RegistryObject<Block> block, String texture, BlockModelGenerators blockModels) {
+        TextureMapping textureMap = new TextureMapping();
+        textureMap.put(TextureSlot.ALL, new Material(Identifier.withDefaultNamespace("block/netherrack")));
+        textureMap.put(TextureSlot.LAYER0, new Material(Identifier.fromNamespaceAndPath(OreConstants.MOD_ID, "block/" + texture)));
 
-    private ConfiguredModel createLayeredNetherOreBlock(String textureKey) {
-        return new ConfiguredModel(models().withExistingParent("nether_" + textureKey, location("block/simple_cube"))
-                .texture("all", ResourceLocation.withDefaultNamespace("block/netherrack"))
-                .texture("layer0", location("block/" + textureKey)).renderType("cutout"));
-    }
+        ModelTemplate template = new ModelTemplate(
+                Optional.of(Identifier.fromNamespaceAndPath(OreConstants.MOD_ID, "block/simple_cube")),
+                Optional.empty(), TextureSlot.ALL, TextureSlot.LAYER0);
 
-    private ResourceLocation location(String path) {
-        return ResourceLocation.fromNamespaceAndPath(OreConstants.MOD_ID, path);
+        Identifier location = template.create(block.get(), textureMap, blockModels.modelOutput);
+
+        blockModels.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block.get(), BlockModelGenerators.plainVariant(location)));
+
+        new ModelTemplate(Optional.of(location), Optional.empty()).create(block.get().asItem(), new TextureMapping(), blockModels.modelOutput);
     }
 }

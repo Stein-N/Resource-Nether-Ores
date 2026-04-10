@@ -4,17 +4,15 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.xstopho.resource_nether_ores.OreConstants;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
 import static net.xstopho.resource_nether_ores.registries.BlockRegistry.*;
 
 public class BlockTagProv extends BlockTagsProvider {
-    public BlockTagProv(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, OreConstants.MOD_ID, existingFileHelper);
+    public BlockTagProv(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, lookupProvider, OreConstants.MOD_ID);
     }
 
     @Override

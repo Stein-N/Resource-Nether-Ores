@@ -2,12 +2,10 @@ package net.xstopho.resource_nether_ores.provider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import net.xstopho.resource_nether_ores.OreConstants;
 import net.xstopho.resource_nether_ores.tags.OreTags;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,8 +14,8 @@ import static net.xstopho.resource_nether_ores.registries.BlockRegistry.*;
 public class ItemTagProv extends ItemTagsProvider {
 
 
-    public ItemTagProv(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, CompletableFuture<TagLookup<Block>> lookup,  @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, provider, lookup, OreConstants.MOD_ID, existingFileHelper);
+    public ItemTagProv(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> unused) {
+        super(output, lookupProvider, OreConstants.MOD_ID);
     }
 
     @Override
