@@ -6,10 +6,6 @@ multiloader {
     loader = "forge"
 
     forgeVersion = providers.gradleProperty("forge")
-    forgeMixins = listOf(
-        "${ modId.get() }.mixins.json",
-        "${ modId.get() }.forge.mixins.json"
-    )
 
     withModPublish()
 
