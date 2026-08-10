@@ -1,8 +1,0 @@
-{
-  "parent": "resource_nether_ores:block/simple_cube",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "all": "minecraft:block/netherrack",
-    "layer0": "resource_nether_ores:block/redstone_ore"
-  }
-}
