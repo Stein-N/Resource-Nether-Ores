@@ -7,7 +7,11 @@ multiloader {
 
     forgeVersion = providers.gradleProperty("forge")
 
-    withModPublish()
+    withModPublish {
+        required = listOf(
+            "resource-library"
+        )
+    }
 
     applyMetadataReplacements(listOf("pack.mcmeta", "META-INF/mods.toml"), mapOf(
         "forge_version" to forgeVersion.get(),

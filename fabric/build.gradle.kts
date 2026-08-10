@@ -10,7 +10,8 @@ multiloader {
 
     withModPublish {
         required.set(listOf(
-            "fabric-api"
+            "fabric-api",
+            "resource-library"
         ))
     }
 
